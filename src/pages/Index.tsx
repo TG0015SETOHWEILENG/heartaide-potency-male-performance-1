@@ -73,37 +73,39 @@ const Index = () => {
       {/* Benefits Section */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
-          <img
-            src="/images/benefits-before-after.webp"
-            alt="Transformation: from tired and defeated to confident and energized"
-            className="w-full max-w-2xl mx-auto rounded-2xl shadow-xl mb-10"
-            loading="lazy"
-          />
           <h2 className="font-heading text-[28px] md:text-[42px] text-foreground text-center mb-10 leading-tight">
             What Men Are Reporting After Just Days on HeartAide:
           </h2>
-          <div className="flex flex-col gap-6 max-w-2xl mx-auto">
-            {[
-              { icon: Zap, title: "Steel-Hard Erections", desc: "Blood flows freely for maximum firmness and confidence" },
-              { icon: Clock, title: "Lasting Stamina", desc: "Performance that goes as long as you want, not just a few minutes" },
-              { icon: Shield, title: "All-Night Recovery", desc: "Ready for round 2, 3, and beyond like you're 25 again" },
-              { icon: Heart, title: "Restored Confidence", desc: "Walk into the bedroom knowing you're the man she married" },
-              { icon: Leaf, title: "Natural Safety", desc: "No dangerous side effects or prescription risks" },
-            ].map(({ icon: Icon, title, desc }) => (
-              <div key={title} className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-cta/15 flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-cta" strokeWidth={2.5} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <img
+              src="/images/benefits-couple.webp"
+              alt="Happy confident couple embracing in warm morning light"
+              className="w-full rounded-2xl shadow-xl order-2 md:order-1"
+              loading="lazy"
+            />
+            <div className="flex flex-col gap-6 order-1 md:order-2">
+              {[
+                { icon: Zap, title: "Steel-Hard Erections", desc: "Blood flows freely for maximum firmness and confidence" },
+                { icon: Clock, title: "Lasting Stamina", desc: "Performance that goes as long as you want, not just a few minutes" },
+                { icon: Shield, title: "All-Night Recovery", desc: "Ready for round 2, 3, and beyond like you're 25 again" },
+                { icon: Heart, title: "Restored Confidence", desc: "Walk into the bedroom knowing you're the man she married" },
+                { icon: Leaf, title: "Natural Safety", desc: "No dangerous side effects or prescription risks" },
+              ].map(({ icon: Icon, title, desc }) => (
+                <div key={title} className="flex items-start gap-4">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-cta/15 flex items-center justify-center">
+                    <Icon className="w-6 h-6 text-cta" strokeWidth={2.5} />
+                  </div>
+                  <div>
+                    <h3 className="font-body font-extrabold text-[20px] md:text-[22px] text-foreground leading-tight mb-1">
+                      {title}
+                    </h3>
+                    <p className="font-body text-[18px] md:text-body text-muted-foreground leading-relaxed">
+                      {desc}
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-body font-extrabold text-[20px] md:text-[22px] text-foreground leading-tight mb-1">
-                    {title}
-                  </h3>
-                  <p className="font-body text-[18px] md:text-body text-muted-foreground leading-relaxed">
-                    {desc}
-                  </p>
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
