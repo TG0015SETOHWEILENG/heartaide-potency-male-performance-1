@@ -54,6 +54,20 @@ const Index = () => {
             ))}
           </div>
         </div>
+
+        <div className="container-narrow text-center mt-8">
+          <p className="font-body text-[18px] md:text-body-lg text-white/80 max-w-2xl mx-auto mb-6 leading-relaxed">
+            Experience the natural breakthrough that's giving men their sexual
+            power back. HeartAide works by optimizing blood flow to restore the
+            performance you remember from your 20s.
+          </p>
+          <button className="bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-body py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto">
+            Fix My Bloodflow
+          </button>
+          <p className="font-body text-[16px] text-white/50 mt-3 uppercase tracking-wide">
+            Try Risk-Free
+          </p>
+        </div>
       </section>
 
       {/* Benefits Section */}
@@ -94,24 +108,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Bottom CTA */}
-      <section className="section-padding bg-secondary">
-        <div className="container-narrow text-center">
-          <p className="font-body text-body md:text-body-lg text-foreground max-w-2xl mx-auto mb-8 leading-relaxed">
-            Experience the natural breakthrough that's giving men their sexual
-            power back. HeartAide works by optimizing blood flow to restore the
-            performance you remember from your 20s.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-body py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto">
-              Fix My Bloodflow
-            </button>
-            <button className="bg-primary hover:opacity-90 text-primary-foreground font-body font-bold text-body py-4 px-10 rounded-lg transition-all uppercase tracking-wide min-h-[60px] w-full sm:w-auto">
-              Try Risk-Free
-            </button>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
