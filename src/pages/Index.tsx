@@ -1,5 +1,5 @@
 import PricingCard from "@/components/PricingCard";
-import { Shield, Zap, Clock, Heart, Leaf } from "lucide-react";
+import { Shield, Zap, Clock, Heart, Leaf, Star, BadgeCheck, Factory, Award, MapPin, ShieldCheck } from "lucide-react";
 
 const pricingPlans = [
   {
@@ -106,6 +106,87 @@ const Index = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="section-padding bg-secondary">
+        <div className="container-narrow">
+          {/* Aggregate Rating */}
+          <div className="text-center mb-10">
+            <div className="flex items-center justify-center gap-1 mb-2">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-7 h-7 text-cta fill-cta" />
+              ))}
+            </div>
+            <p className="font-heading text-[28px] md:text-[36px] text-foreground leading-tight mb-1">
+              4.9 out of 5 Stars
+            </p>
+            <p className="font-body text-[16px] text-muted-foreground">
+              Based on <span className="font-bold text-foreground">12,847</span> verified reviews
+            </p>
+          </div>
+
+          {/* Masonry Grid */}
+          <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
+            {[
+              { quote: "My wife actually said 'where did THAT come from?' Best feeling ever.", name: "Mike R.", age: 52, avatar: "/images/avatar-mike.webp" },
+              { quote: "From 2 minutes to 45+ minutes. My confidence is through the roof.", name: "David K.", age: 48, avatar: "/images/avatar-david.webp" },
+              { quote: "Haven't felt this virile since my 20s. My wife is happier than ever.", name: "Robert L.", age: 56, avatar: "/images/avatar-robert.webp" },
+              { quote: "At 59, I thought my best days were behind me. This brought back the passion my wife and I thought was gone forever.", name: "James T.", age: 59, avatar: "/images/avatar-james.webp" },
+              { quote: "The difference is night and day. My stamina returned and my wife can't keep her hands off me.", name: "Carlos M.", age: 44, avatar: "/images/avatar-carlos.webp" },
+              { quote: "I was skeptical but desperate. Now I feel like I'm 25 again. My marriage has never been stronger.", name: "Tony P.", age: 51, avatar: "/images/avatar-tony.webp" },
+              { quote: "My wife said it's like being with a completely different man. I wish I'd found this years ago.", name: "Mark D.", age: 53, avatar: "/images/avatar-mark.webp" },
+            ].map(({ quote, name, age, avatar }) => (
+              <div
+                key={name}
+                className="break-inside-avoid bg-card rounded-xl p-5 shadow-md border border-border"
+              >
+                <div className="flex items-center gap-1 mb-3">
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 text-cta fill-cta" />
+                  ))}
+                </div>
+                <p className="font-body text-[16px] md:text-[17px] text-foreground leading-relaxed mb-4 italic">
+                  "{quote}"
+                </p>
+                <div className="flex items-center gap-3">
+                  <img
+                    src={avatar}
+                    alt={name}
+                    className="w-10 h-10 rounded-full object-cover"
+                    loading="lazy"
+                  />
+                  <div>
+                    <p className="font-body font-bold text-[14px] text-foreground leading-tight">
+                      {name}, Age {age}
+                    </p>
+                    <div className="flex items-center gap-1 mt-0.5">
+                      <BadgeCheck className="w-3.5 h-3.5 text-cta" />
+                      <span className="font-body text-[12px] text-cta font-semibold">Verified Buyer</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Trust Badges Row */}
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-6 md:gap-10">
+            {[
+              { icon: Factory, label: "FDA-Registered Facility" },
+              { icon: Award, label: "GMP Certified" },
+              { icon: MapPin, label: "Made in USA" },
+              { icon: ShieldCheck, label: "365-Day Guarantee" },
+            ].map(({ icon: Icon, label }) => (
+              <div key={label} className="flex flex-col items-center gap-1.5 opacity-70">
+                <Icon className="w-8 h-8 text-foreground" strokeWidth={1.5} />
+                <span className="font-body text-[12px] md:text-[13px] text-foreground font-semibold uppercase tracking-wide text-center">
+                  {label}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>
