@@ -38,7 +38,7 @@ const Index = () => {
         <div className="container-narrow text-center mb-5 md:mb-8">
           <h1 className="font-heading text-[32px] md:text-display text-white mb-3 leading-[1.15]">
             The Recommended Blood Flow Formula Men Over 40 Are Choosing Over{" "}
-            <span className="line-through opacity-60">Vxxxxx</span>
+            <span className="text-red-500 font-bold">Vxxxxx</span>
           </h1>
           <p className="font-body text-[18px] md:text-body-lg text-white/70 max-w-2xl mx-auto mb-1">
             The natural 4-drop solution top urologists are calling
@@ -56,7 +56,7 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="container-narrow text-center mt-8">
+        <div className="text-center mt-8 mx-auto px-4" style={{ maxWidth: '1300px' }}>
           <p className="font-body text-[18px] md:text-body-lg text-white/80 max-w-2xl mx-auto mb-6 leading-relaxed">
             Experience the natural breakthrough that's giving men their sexual
             power back. HeartAide works by optimizing blood flow to restore the
