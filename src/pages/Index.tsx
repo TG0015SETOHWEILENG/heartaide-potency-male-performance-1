@@ -32,16 +32,16 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero + Pricing — single above-the-fold section */}
-      <section className="px-4 pt-6 pb-8 md:px-8 md:pt-10 md:pb-14 bg-secondary">
+      <section className="px-4 pt-6 pb-8 md:px-8 md:pt-10 md:pb-14 bg-secondary relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `linear-gradient(to right, rgba(10, 15, 30, 0.92) 0%, rgba(10, 15, 30, 0.75) 60%, rgba(10, 15, 30, 0.5) 100%), url('/images/hero-bg.webp')` }}>
         <div className="container-narrow text-center mb-5 md:mb-8">
-          <h1 className="font-heading text-[32px] md:text-display text-foreground mb-3 leading-[1.15]">
+          <h1 className="font-heading text-[32px] md:text-display text-white mb-3 leading-[1.15]">
             The Recommended Blood Flow Formula Men Over 40 Are Choosing Over{" "}
             <span className="line-through opacity-60">Vxxxxx</span>
           </h1>
-          <p className="font-body text-[18px] md:text-body-lg text-muted-foreground max-w-2xl mx-auto mb-1">
+          <p className="font-body text-[18px] md:text-body-lg text-white/70 max-w-2xl mx-auto mb-1">
             The natural 4-drop solution top urologists are calling
           </p>
-          <p className="font-body text-[18px] md:text-body-lg text-foreground font-semibold italic max-w-2xl mx-auto">
+          <p className="font-body text-[18px] md:text-body-lg text-white font-semibold italic max-w-2xl mx-auto">
             "the most significant advance in male performance in 30 years."
           </p>
         </div>
