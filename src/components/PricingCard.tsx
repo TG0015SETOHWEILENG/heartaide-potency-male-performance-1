@@ -36,12 +36,20 @@ const PricingCard: React.FC<PricingCardProps> = ({
       </div>
 
       <div className="px-5 py-6 flex flex-col items-center gap-3 flex-1">
-        {/* Bottle image */}
-        <img
-          src={`/images/bottle-${bottleCount}.png`}
-          alt={`${bottleCount} bottle${Number(bottleCount) > 1 ? "s" : ""} of HeartAide`}
-          className="w-28 h-auto object-contain my-1"
-        />
+        {/* Bottle image with savings bubble */}
+        <div className="relative mb-2">
+          <img
+            src={`/images/bottle-${bottleCount}.png`}
+            alt={`${bottleCount} bottle${Number(bottleCount) > 1 ? "s" : ""} of HeartAide`}
+            className="w-44 h-auto object-contain drop-shadow-xl"
+          />
+          <div
+            className="absolute -right-3 -bottom-2 bg-cta rounded-full w-[72px] h-[72px] flex flex-col items-center justify-center rotate-12 shadow-lg border-[3px] border-white/20"
+          >
+            <span className="font-body font-extrabold text-[12px] text-cta-foreground uppercase leading-none">Save</span>
+            <span className="font-body font-extrabold text-[18px] text-cta-foreground leading-none">{savings}</span>
+          </div>
+        </div>
 
         {/* Supply info */}
         <p className="font-body font-bold text-[18px] md:text-[20px] text-primary-foreground uppercase tracking-wide">
@@ -52,14 +60,6 @@ const PricingCard: React.FC<PricingCardProps> = ({
         <p className="font-body text-[15px] md:text-[16px] text-primary-foreground/80 leading-snug max-w-[220px]">
           {tagline}
         </p>
-
-        {/* Savings bubble */}
-        <div
-          className="bg-cta rounded-full w-[80px] h-[80px] flex flex-col items-center justify-center rotate-12 shadow-lg my-1"
-        >
-          <span className="font-body font-extrabold text-[13px] text-cta-foreground uppercase leading-none">Save</span>
-          <span className="font-body font-extrabold text-[20px] text-cta-foreground leading-none">{savings}</span>
-        </div>
 
         {/* Price */}
         <p className="font-body font-extrabold text-[42px] md:text-[50px] text-primary-foreground leading-none">
