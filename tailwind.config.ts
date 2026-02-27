@@ -64,6 +64,13 @@ export default {
           DEFAULT: "hsl(var(--cta))",
           foreground: "hsl(var(--cta-foreground))",
         },
+        pricing: {
+          bg: "hsl(var(--pricing-bg))",
+          border: "hsl(var(--pricing-border))",
+          highlight: "hsl(var(--pricing-highlight))",
+          badge: "hsl(var(--pricing-badge))",
+          "badge-foreground": "hsl(var(--pricing-badge-foreground))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
