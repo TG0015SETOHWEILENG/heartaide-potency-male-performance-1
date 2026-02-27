@@ -111,9 +111,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why HeartAide Works Better */}
-      <WhySection />
-
       {/* Testimonials Section */}
       <section className="section-padding bg-secondary">
         <div className="container-narrow">
@@ -199,6 +196,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Why HeartAide Works Better */}
+      <WhySection />
 
     </div>
   );
