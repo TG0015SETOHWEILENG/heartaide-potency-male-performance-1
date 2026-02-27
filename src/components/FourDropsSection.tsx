@@ -1,8 +1,8 @@
-import { Droplets, Pill, Zap, Clock, ShieldAlert, CheckCircle2 } from "lucide-react";
+import { Droplets, Pill, Zap, ShieldAlert, CheckCircle2 } from "lucide-react";
 
 const FourDropsSection = () => {
   return (
-    <section className="section-padding bg-primary text-primary-foreground">
+    <section className="section-padding bg-background text-foreground">
       <div className="container-narrow">
         {/* Big headline */}
         <div className="text-center mb-12">
@@ -25,8 +25,8 @@ const FourDropsSection = () => {
               <h3 className="font-heading text-[24px] md:text-[32px] leading-tight mb-3">
                 Your Stomach Acid Is Destroying Your Supplements
               </h3>
-              <p className="font-body text-[18px] md:text-[20px] text-primary-foreground/70 leading-relaxed">
-                When you swallow a pill, up to <span className="font-extrabold text-primary-foreground">80% of the active ingredients</span> are destroyed before they ever reach your bloodstream. That's why most ED supplements take 30–60 minutes to kick in… <em>if they work at all.</em>
+              <p className="font-body text-[18px] md:text-[20px] text-muted-foreground leading-relaxed">
+                When you swallow a pill, up to <span className="font-extrabold text-foreground">80% of the active ingredients</span> are destroyed before they ever reach your bloodstream. That's why most ED supplements take 30–60 minutes to kick in… <em>if they work at all.</em>
               </p>
             </div>
           </div>
@@ -35,7 +35,7 @@ const FourDropsSection = () => {
         {/* The Absorption Comparison */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {/* Pill path */}
-          <div className="rounded-2xl bg-primary-foreground/5 border border-primary-foreground/10 p-6 md:p-8">
+          <div className="rounded-2xl bg-muted border border-border p-6 md:p-8">
             <div className="flex items-center gap-3 mb-6">
               <Pill className="w-7 h-7 text-destructive" strokeWidth={2} />
               <h4 className="font-heading text-[20px] md:text-[24px]">The Pill Path</h4>
@@ -53,7 +53,7 @@ const FourDropsSection = () => {
                   </div>
                   <div>
                     <p className="font-body text-[18px] md:text-[20px] font-bold leading-snug">{text}</p>
-                    <p className="font-body text-[16px] md:text-[18px] text-primary-foreground/60 leading-snug">{sub}</p>
+                    <p className="font-body text-[16px] md:text-[18px] text-muted-foreground leading-snug">{sub}</p>
                   </div>
                 </div>
               ))}
@@ -66,7 +66,7 @@ const FourDropsSection = () => {
               Better Way
             </div>
             <div className="flex items-center gap-3 mb-6">
-              <Droplets className="w-7 h-7 text-green-400" strokeWidth={2} />
+              <Droplets className="w-7 h-7 text-green-600" strokeWidth={2} />
               <h4 className="font-heading text-[20px] md:text-[24px]">The HeartAide Path</h4>
             </div>
             <div className="flex flex-col gap-4">
@@ -78,11 +78,11 @@ const FourDropsSection = () => {
               ].map(({ step, text, sub }) => (
                 <div key={step} className="flex items-start gap-4">
                   <div className="flex-shrink-0 w-9 h-9 rounded-full bg-green-500/20 flex items-center justify-center">
-                    <span className="font-body text-[14px] font-bold text-green-400">{step}</span>
+                    <span className="font-body text-[14px] font-bold text-green-600">{step}</span>
                   </div>
                   <div>
                     <p className="font-body text-[18px] md:text-[20px] font-bold leading-snug">{text}</p>
-                    <p className="font-body text-[16px] md:text-[18px] text-primary-foreground/60 leading-snug">{sub}</p>
+                    <p className="font-body text-[16px] md:text-[18px] text-muted-foreground leading-snug">{sub}</p>
                   </div>
                 </div>
               ))}
@@ -106,17 +106,17 @@ const FourDropsSection = () => {
             { icon: ShieldAlert, stat: "Zero", label: "Stomach upset" },
             { icon: CheckCircle2, stat: "100%", label: "Full delivery" },
           ].map(({ icon: Icon, stat, label }) => (
-            <div key={label} className="rounded-xl bg-primary-foreground/5 border border-primary-foreground/10 p-5 text-center">
+            <div key={label} className="rounded-xl bg-muted border border-border p-5 text-center">
               <Icon className="w-7 h-7 text-cta mx-auto mb-2" strokeWidth={2} />
               <p className="font-heading text-[26px] md:text-[32px] leading-none mb-1">{stat}</p>
-              <p className="font-body text-[14px] md:text-[16px] text-primary-foreground/60">{label}</p>
+              <p className="font-body text-[14px] md:text-[16px] text-muted-foreground">{label}</p>
             </div>
           ))}
         </div>
 
         {/* Closing line + CTA */}
         <div className="text-center">
-          <p className="font-body text-[18px] md:text-[22px] text-primary-foreground/70 leading-relaxed max-w-2xl mx-auto mb-6">
+          <p className="font-body text-[18px] md:text-[22px] text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-6">
             No horse pills. No timing it 60 minutes before like Vxxxxx. No stomach upset. Just precise, efficient delivery of the exact formula doctors are recommending.
           </p>
           <button className="bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-body py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto">
