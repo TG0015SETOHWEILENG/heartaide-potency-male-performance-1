@@ -36,6 +36,13 @@ const PricingCard: React.FC<PricingCardProps> = ({
       </div>
 
       <div className="px-5 py-6 flex flex-col items-center gap-3 flex-1">
+        {/* Bottle image */}
+        <img
+          src={`/images/bottle-${bottleCount}.png`}
+          alt={`${bottleCount} bottle${Number(bottleCount) > 1 ? "s" : ""} of HeartAide`}
+          className="w-28 h-auto object-contain my-1"
+        />
+
         {/* Supply info */}
         <p className="font-body font-bold text-[18px] md:text-[20px] text-primary-foreground uppercase tracking-wide">
           {supply}
