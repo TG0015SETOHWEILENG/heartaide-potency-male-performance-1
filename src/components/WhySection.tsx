@@ -27,7 +27,19 @@ const WhySection = () => {
             Unlike dangerous pills, HeartAide targets the root cause of ED:{" "}
             <span className="font-extrabold text-foreground">Poor Blood Flow.</span>
           </p>
+          <p className="font-body text-[16px] text-muted-foreground max-w-xl mx-auto mt-3 leading-relaxed">
+            Pills force temporary results by artificially dilating blood vessels.
+            But they don't address <em>WHY</em> blood flow is restricted in the first place.
+          </p>
+          <p className="font-heading text-[22px] md:text-[28px] text-foreground mt-6 leading-tight italic">
+            HeartAide is different.
+          </p>
         </div>
+
+        {/* Subheading */}
+        <h3 className="font-heading text-[22px] md:text-[30px] text-foreground text-center mb-8 leading-tight">
+          How HeartAide Restores Natural Function:
+        </h3>
 
         {/* Split Comparison */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -46,7 +58,6 @@ const WhySection = () => {
                 </p>
               </div>
             </div>
-
             <ul className="flex flex-col gap-4 mt-6">
               {pillProblems.map(({ icon: Icon, text }) => (
                 <li key={text} className="flex items-center gap-3">
@@ -82,7 +93,6 @@ const WhySection = () => {
                 </p>
               </div>
             </div>
-
             <ul className="flex flex-col gap-4 mt-6">
               {heartAideBenefits.map(({ icon: Icon, text }) => (
                 <li key={text} className="flex items-center gap-3">
@@ -97,11 +107,6 @@ const WhySection = () => {
             </ul>
           </div>
         </div>
-
-        {/* Bottom statement */}
-        <p className="font-heading text-[22px] md:text-[28px] text-foreground text-center mt-10 leading-tight italic">
-          HeartAide is different.
-        </p>
       </div>
     </section>
   );
