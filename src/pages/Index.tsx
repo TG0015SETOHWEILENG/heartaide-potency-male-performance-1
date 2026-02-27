@@ -120,7 +120,10 @@ const Index = () => {
                 <Star key={i} className="w-7 h-7 text-cta fill-cta" />
               ))}
             </div>
-            <p className="font-heading text-[28px] md:text-[36px] text-foreground leading-tight mb-1">
+            <h2 className="font-heading text-[28px] md:text-[42px] text-foreground leading-tight mb-2">
+              Join 47,000+ Men Who've Restored Their Sexual Power
+            </h2>
+            <p className="font-heading text-[22px] md:text-[28px] text-foreground leading-tight mb-1">
               4.9 out of 5 Stars
             </p>
             <p className="font-body text-[16px] text-muted-foreground">
@@ -163,8 +166,8 @@ const Index = () => {
                       {name}, Age {age}
                     </p>
                     <div className="flex items-center gap-1 mt-0.5">
-                      <BadgeCheck className="w-3.5 h-3.5 text-cta" />
-                      <span className="font-body text-[12px] text-cta font-semibold">Verified Buyer</span>
+                      <BadgeCheck className="w-3.5 h-3.5 text-green-500" />
+                      <span className="font-body text-[12px] text-green-500 font-semibold">Verified Buyer</span>
                     </div>
                   </div>
                 </div>
