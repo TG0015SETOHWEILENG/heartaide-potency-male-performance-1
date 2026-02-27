@@ -59,6 +59,12 @@ const Index = () => {
       {/* Benefits Section */}
       <section className="section-padding bg-background">
         <div className="container-narrow">
+          <img
+            src="/images/benefits-before-after.webp"
+            alt="Transformation: from tired and defeated to confident and energized"
+            className="w-full max-w-2xl mx-auto rounded-2xl shadow-xl mb-10"
+            loading="lazy"
+          />
           <h2 className="font-heading text-[28px] md:text-[42px] text-foreground text-center mb-10 leading-tight">
             What Men Are Reporting After Just Days on HeartAide:
           </h2>
