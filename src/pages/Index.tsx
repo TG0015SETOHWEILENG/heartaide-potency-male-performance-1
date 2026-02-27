@@ -1,5 +1,5 @@
 import PricingCard from "@/components/PricingCard";
-import { Shield, Zap, Clock, Heart, Leaf, Star, BadgeCheck, Factory, Award, MapPin, ShieldCheck } from "lucide-react";
+import { Shield, Zap, Clock, Heart, Leaf, Star, BadgeCheck, Award, MapPin, ShieldCheck } from "lucide-react";
 
 const pricingPlans = [
   {
@@ -163,7 +163,7 @@ const Index = () => {
                   />
                   <div>
                     <p className="font-body font-bold text-[14px] text-foreground leading-tight">
-                      {name}, Age {age}
+                      {name}, {age}
                     </p>
                     <div className="flex items-center gap-1 mt-0.5">
                       <BadgeCheck className="w-3.5 h-3.5 text-green-500" />
@@ -176,16 +176,18 @@ const Index = () => {
           </div>
 
           {/* Trust Badges Row */}
-          <div className="mt-12 flex flex-wrap justify-center items-center gap-6 md:gap-10">
+          <div className="mt-12 flex flex-wrap justify-center items-center gap-8 md:gap-14">
             {[
-              { icon: Factory, label: "FDA-Registered Facility" },
+              { icon: ShieldCheck, label: "FDA-Registered Facility" },
               { icon: Award, label: "GMP Certified" },
               { icon: MapPin, label: "Made in USA" },
-              { icon: ShieldCheck, label: "365-Day Guarantee" },
+              { icon: Star, label: "365-Day Guarantee" },
             ].map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center gap-1.5 opacity-70">
-                <Icon className="w-8 h-8 text-foreground" strokeWidth={1.5} />
-                <span className="font-body text-[12px] md:text-[13px] text-foreground font-semibold uppercase tracking-wide text-center">
+              <div key={label} className="flex flex-col items-center gap-2">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-primary/60" strokeWidth={1.5} />
+                </div>
+                <span className="font-body text-[12px] md:text-[13px] text-foreground/70 font-semibold text-center leading-tight max-w-[100px]">
                   {label}
                 </span>
               </div>
