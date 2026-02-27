@@ -7,12 +7,22 @@ export default {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: "1.25rem",
       screens: {
         "2xl": "1400px",
       },
     },
     extend: {
+      fontFamily: {
+        heading: ['Lora', 'Georgia', 'serif'],
+        body: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        'display': ['3rem', { lineHeight: '1.15', fontWeight: '700' }],
+        'display-md': ['2.25rem', { lineHeight: '1.2', fontWeight: '700' }],
+        'body-lg': ['1.25rem', { lineHeight: '1.7' }],
+        'body': ['1.125rem', { lineHeight: '1.7' }],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
