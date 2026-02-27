@@ -40,6 +40,13 @@
     --cta: 38 90% 55%;
     --cta-foreground: 216 50% 12%;
 
+    /* Pricing card blues */
+    --pricing-bg: 220 85% 25%;
+    --pricing-border: 220 85% 40%;
+    --pricing-highlight: 220 90% 50%;
+    --pricing-badge: 38 90% 55%;
+    --pricing-badge-foreground: 0 0% 100%;
+
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -75,6 +82,11 @@
     --ring: 40 33% 97%;
     --cta: 38 90% 55%;
     --cta-foreground: 216 50% 12%;
+    --pricing-bg: 220 85% 18%;
+    --pricing-border: 220 85% 30%;
+    --pricing-highlight: 220 90% 45%;
+    --pricing-badge: 38 90% 55%;
+    --pricing-badge-foreground: 0 0% 100%;
   }
 }
 
