@@ -32,28 +32,26 @@ const WhySection = () => {
         {/* Split Comparison */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* Pills Side */}
-          <div className="rounded-2xl border border-destructive/20 bg-destructive/[0.03] p-6 md:p-8 flex flex-col">
-            <div className="flex items-center gap-3 mb-2">
-              <h3 className="font-heading text-[20px] md:text-[24px] text-foreground">
-                The Pill Approach
-              </h3>
-            </div>
-            <p className="font-body text-[13px] text-muted-foreground mb-6 uppercase tracking-wide font-semibold">
-              Temporary & Risky
-            </p>
-
-            {/* Muted pill image */}
-            <div className="flex justify-center mb-6">
-              <div className="w-28 h-28 md:w-32 md:h-32 rounded-2xl bg-destructive/[0.06] flex items-center justify-center">
-                <Pill className="w-16 h-16 md:w-20 md:h-20 text-destructive/30" strokeWidth={1} />
+          <div className="rounded-2xl border border-red-600/20 bg-red-600/[0.03] p-6 md:p-8 flex flex-col">
+            <div className="flex items-center gap-4 mb-2">
+              <div className="w-14 h-14 rounded-2xl bg-red-600/[0.08] flex items-center justify-center flex-shrink-0">
+                <Pill className="w-8 h-8 text-red-600/40" strokeWidth={1.5} />
+              </div>
+              <div>
+                <h3 className="font-heading text-[20px] md:text-[24px] text-foreground">
+                  The Pill Approach
+                </h3>
+                <p className="font-body text-[13px] text-muted-foreground uppercase tracking-wide font-semibold">
+                  Temporary & Risky
+                </p>
               </div>
             </div>
 
-            <ul className="flex flex-col gap-4 mt-auto">
+            <ul className="flex flex-col gap-4 mt-6">
               {pillProblems.map(({ icon: Icon, text }) => (
                 <li key={text} className="flex items-center gap-3">
-                  <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-destructive/10 flex items-center justify-center">
-                    <Icon className="w-4.5 h-4.5 text-destructive/70" strokeWidth={2} />
+                  <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-red-600/10 flex items-center justify-center">
+                    <Icon className="w-4.5 h-4.5 text-red-600" strokeWidth={2} />
                   </div>
                   <span className="font-body text-[15px] md:text-[16px] text-foreground/70 leading-snug">
                     {text}
@@ -68,26 +66,24 @@ const WhySection = () => {
             <div className="absolute top-0 right-0 bg-cta text-cta-foreground font-body text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-bl-xl">
               Better Way
             </div>
-            <div className="flex items-center gap-3 mb-2">
-              <h3 className="font-heading text-[20px] md:text-[24px] text-foreground">
-                The HeartAide Approach
-              </h3>
-            </div>
-            <p className="font-body text-[13px] text-muted-foreground mb-6 uppercase tracking-wide font-semibold">
-              Natural & Lasting
-            </p>
-
-            {/* Product dropper image */}
-            <div className="flex justify-center mb-6">
+            <div className="flex items-center gap-4 mb-2">
               <img
                 src="/images/bottle-1.png"
                 alt="HeartAide dropper bottle"
-                className="w-28 h-28 md:w-32 md:h-32 object-contain drop-shadow-lg"
+                className="w-14 h-14 object-contain flex-shrink-0"
                 loading="lazy"
               />
+              <div>
+                <h3 className="font-heading text-[20px] md:text-[24px] text-foreground">
+                  The HeartAide Approach
+                </h3>
+                <p className="font-body text-[13px] text-muted-foreground uppercase tracking-wide font-semibold">
+                  Natural & Lasting
+                </p>
+              </div>
             </div>
 
-            <ul className="flex flex-col gap-4 mt-auto">
+            <ul className="flex flex-col gap-4 mt-6">
               {heartAideBenefits.map(({ icon: Icon, text }) => (
                 <li key={text} className="flex items-center gap-3">
                   <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-green-500/10 flex items-center justify-center">
