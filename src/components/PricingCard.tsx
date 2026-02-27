@@ -20,9 +20,11 @@ const PricingCard: React.FC<PricingCardProps> = ({
   isFeatured = false,
 }) => {
   return (
-    <div
-      className={`relative rounded-2xl overflow-hidden flex flex-col items-center text-center ${
-        isFeatured ? "ring-4 ring-cta scale-[1.03] z-10" : ""
+    <a
+      href="#"
+      onClick={(e) => e.preventDefault()}
+      className={`relative rounded-2xl overflow-hidden flex flex-col items-center text-center cursor-pointer hover:scale-[1.02] transition-transform duration-200 ${
+        isFeatured ? "ring-4 ring-cta scale-[1.03] z-10 hover:scale-[1.05]" : ""
       }`}
       style={{
         background: `linear-gradient(180deg, hsl(var(--pricing-highlight)) 0%, hsl(var(--pricing-bg)) 40%)`,
@@ -81,7 +83,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
           Fix My Performance
         </button>
       </div>
-    </div>
+    </a>
   );
 };
 
