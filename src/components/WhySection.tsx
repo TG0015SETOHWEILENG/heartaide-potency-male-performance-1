@@ -44,16 +44,16 @@ const WhySection = () => {
         {/* Split Comparison */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {/* Pills Side */}
-          <div className="rounded-2xl border border-red-500/40 bg-red-100/80 backdrop-blur-sm p-6 md:p-8 flex flex-col">
+          <div className="rounded-2xl border border-red-500/30 bg-white/10 backdrop-blur-md p-6 md:p-8 flex flex-col">
             <div className="flex items-center gap-4 mb-2">
               <div className="w-14 h-14 rounded-2xl bg-red-600/20 flex items-center justify-center flex-shrink-0">
                 <Pill className="w-8 h-8 text-red-400/60" strokeWidth={1.5} />
               </div>
               <div>
-                <h3 className="font-heading text-[20px] md:text-[24px] text-gray-900">
+                <h3 className="font-heading text-[20px] md:text-[24px] text-white">
                   The Pill Approach
                 </h3>
-                <p className="font-body text-[13px] text-red-600 uppercase tracking-wide font-semibold">
+                <p className="font-body text-[13px] text-red-300 uppercase tracking-wide font-semibold">
                   Temporary & Risky
                 </p>
               </div>
@@ -64,7 +64,7 @@ const WhySection = () => {
                   <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-red-600/20 flex items-center justify-center">
                     <Icon className="w-4.5 h-4.5 text-red-400" strokeWidth={2} />
                   </div>
-                  <span className="font-body text-[15px] md:text-[16px] text-gray-700 leading-snug">
+                  <span className="font-body text-[15px] md:text-[16px] text-white/80 leading-snug">
                     {text}
                   </span>
                 </li>
@@ -73,7 +73,7 @@ const WhySection = () => {
           </div>
 
           {/* HeartAide Side */}
-          <div className="rounded-2xl border-2 border-green-400/40 bg-yellow-100/80 backdrop-blur-sm p-6 md:p-8 flex flex-col relative overflow-hidden">
+          <div className="rounded-2xl border-2 border-green-400/30 bg-white/10 backdrop-blur-md p-6 md:p-8 flex flex-col relative overflow-hidden">
             <div className="absolute top-0 right-0 bg-cta text-cta-foreground font-body text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-bl-xl">
               Better Way
             </div>
@@ -85,10 +85,10 @@ const WhySection = () => {
                 loading="lazy"
               />
               <div>
-                <h3 className="font-heading text-[20px] md:text-[24px] text-gray-900">
+                <h3 className="font-heading text-[20px] md:text-[24px] text-white">
                   The HeartAide Approach
                 </h3>
-                <p className="font-body text-[13px] text-green-600 uppercase tracking-wide font-semibold">
+                <p className="font-body text-[13px] text-green-300 uppercase tracking-wide font-semibold">
                   Natural & Lasting
                 </p>
               </div>
@@ -99,7 +99,7 @@ const WhySection = () => {
                   <div className="flex-shrink-0 w-9 h-9 rounded-xl bg-green-500/15 flex items-center justify-center">
                     <Icon className="w-4.5 h-4.5 text-green-400" strokeWidth={2} />
                   </div>
-                  <span className="font-body text-[15px] md:text-[16px] text-gray-700 leading-snug">
+                  <span className="font-body text-[15px] md:text-[16px] text-white/80 leading-snug">
                     {text}
                   </span>
                 </li>
