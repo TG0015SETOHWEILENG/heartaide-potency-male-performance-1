@@ -16,7 +16,7 @@ const heartAideBenefits = [
 
 const WhySection = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-secondary relative overflow-hidden" style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, hsl(var(--primary) / 0.06) 0%, transparent 50%), radial-gradient(circle at 80% 20%, hsl(var(--accent) / 0.08) 0%, transparent 40%), radial-gradient(circle at 50% 80%, hsl(var(--primary) / 0.04) 0%, transparent 60%)' }}>
       <div className="container-narrow">
         {/* Headline */}
         <div className="text-center mb-10">
