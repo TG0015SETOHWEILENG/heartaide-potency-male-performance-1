@@ -1,4 +1,5 @@
 import PricingCard from "@/components/PricingCard";
+import { Shield, Zap, Clock, Heart, Leaf } from "lucide-react";
 
 const pricingPlans = [
   {
@@ -50,6 +51,38 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
             {pricingPlans.map((plan) => (
               <PricingCard key={plan.badge} {...plan} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="section-padding bg-background">
+        <div className="container-narrow">
+          <h2 className="font-heading text-[28px] md:text-[42px] text-foreground text-center mb-10 leading-tight">
+            What Men Are Reporting After Just Days on HeartAide:
+          </h2>
+          <div className="flex flex-col gap-6 max-w-2xl mx-auto">
+            {[
+              { icon: Zap, title: "Steel-Hard Erections", desc: "Blood flows freely for maximum firmness and confidence" },
+              { icon: Clock, title: "Lasting Stamina", desc: "Performance that goes as long as you want, not just a few minutes" },
+              { icon: Shield, title: "All-Night Recovery", desc: "Ready for round 2, 3, and beyond like you're 25 again" },
+              { icon: Heart, title: "Restored Confidence", desc: "Walk into the bedroom knowing you're the man she married" },
+              { icon: Leaf, title: "Natural Safety", desc: "No dangerous side effects or prescription risks" },
+            ].map(({ icon: Icon, title, desc }) => (
+              <div key={title} className="flex items-start gap-4">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-cta/15 flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-cta" strokeWidth={2.5} />
+                </div>
+                <div>
+                  <h3 className="font-body font-extrabold text-[20px] md:text-[22px] text-foreground leading-tight mb-1">
+                    {title}
+                  </h3>
+                  <p className="font-body text-[18px] md:text-body text-muted-foreground leading-relaxed">
+                    {desc}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </div>
