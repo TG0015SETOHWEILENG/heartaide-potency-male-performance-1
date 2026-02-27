@@ -1,4 +1,5 @@
 import PricingCard from "@/components/PricingCard";
+import WhySection from "@/components/WhySection";
 import { Shield, Zap, Clock, Heart, Leaf, Star, BadgeCheck, Award, MapPin, ShieldCheck } from "lucide-react";
 
 const pricingPlans = [
@@ -109,6 +110,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Why HeartAide Works Better */}
+      <WhySection />
 
       {/* Testimonials Section */}
       <section className="section-padding bg-secondary">
