@@ -36,6 +36,16 @@ const PricingCard: React.FC<PricingCardProps> = ({
       </div>
 
       <div className="px-5 py-6 flex flex-col items-center gap-3 flex-1">
+        {/* Supply info */}
+        <p className="font-body font-bold text-[18px] md:text-[20px] text-primary-foreground uppercase tracking-wide">
+          {supply}
+        </p>
+
+        {/* Tagline */}
+        <p className="font-body text-[15px] md:text-[16px] text-primary-foreground/80 leading-snug max-w-[220px]">
+          {tagline}
+        </p>
+
         {/* Bottle image with savings bubble */}
         <div className="relative mb-2">
           <img
@@ -50,16 +60,6 @@ const PricingCard: React.FC<PricingCardProps> = ({
             <span className="font-body font-extrabold text-[18px] text-cta-foreground leading-none">{savings}</span>
           </div>
         </div>
-
-        {/* Supply info */}
-        <p className="font-body font-bold text-[18px] md:text-[20px] text-primary-foreground uppercase tracking-wide">
-          {supply}
-        </p>
-
-        {/* Tagline */}
-        <p className="font-body text-[15px] md:text-[16px] text-primary-foreground/80 leading-snug max-w-[220px]">
-          {tagline}
-        </p>
 
         {/* Price */}
         <p className="font-body font-extrabold text-[42px] md:text-[50px] text-primary-foreground leading-none">
