@@ -16,7 +16,7 @@ const heartAideBenefits = [
 
 const WhySection = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-secondary relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `linear-gradient(to bottom, rgba(10, 15, 30, 0.92), rgba(10, 15, 30, 0.88)), url('/images/why-section-bg.webp')` }}>
       <div className="container-narrow">
         {/* Headline */}
         <div className="text-center mb-10">
