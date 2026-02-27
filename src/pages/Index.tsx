@@ -31,26 +31,23 @@ const pricingPlans = [
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="section-padding bg-secondary">
-        <div className="container-narrow text-center">
-          <h1 className="font-heading text-display-md md:text-display text-foreground mb-5">
+      {/* Hero + Pricing — single above-the-fold section */}
+      <section className="px-4 pt-6 pb-8 md:px-8 md:pt-10 md:pb-14 bg-secondary">
+        <div className="container-narrow text-center mb-5 md:mb-8">
+          <h1 className="font-heading text-[32px] md:text-display text-foreground mb-3 leading-[1.15]">
             The Recommended Blood Flow Formula Men Over 40 Are Choosing Over{" "}
             <span className="line-through opacity-60">Vxxxxx</span>
           </h1>
-          <p className="font-body text-body md:text-body-lg text-muted-foreground max-w-2xl mx-auto mb-2">
+          <p className="font-body text-[18px] md:text-body-lg text-muted-foreground max-w-2xl mx-auto mb-1">
             The natural 4-drop solution top urologists are calling
           </p>
-          <p className="font-body text-body md:text-body-lg text-foreground font-semibold italic max-w-2xl mx-auto">
+          <p className="font-body text-[18px] md:text-body-lg text-foreground font-semibold italic max-w-2xl mx-auto">
             "the most significant advance in male performance in 30 years."
           </p>
         </div>
-      </section>
 
-      {/* Pricing Cards */}
-      <section className="section-padding">
         <div className="container-narrow">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
             {pricingPlans.map((plan) => (
               <PricingCard key={plan.badge} {...plan} />
             ))}
