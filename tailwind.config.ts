@@ -14,17 +14,17 @@ export default {
     },
     extend: {
       fontFamily: {
-        heading: ['Sentient', 'Georgia', 'serif'],
-        body: ['Manrope', 'system-ui', 'sans-serif'],
+        heading: ["Sentient", "Georgia", "serif"],
+        body: ["Manrope", "system-ui", "sans-serif"],
       },
       fontSize: {
-        'display': ['60px', { lineHeight: '1.1', fontWeight: '400' }],
-        'display-md': ['38px', { lineHeight: '1.15', fontWeight: '400' }],
-        'h2': ['36px', { lineHeight: '1.2', fontWeight: '600' }],
-        'h2-md': ['28px', { lineHeight: '1.25', fontWeight: '600' }],
-        'h3': ['26px', { lineHeight: '1.3', fontWeight: '600' }],
-        'body-lg': ['22px', { lineHeight: '1.6' }],
-        'body': ['20px', { lineHeight: '1.6' }],
+        display: ["60px", { lineHeight: "1.1", fontWeight: "400" }],
+        "display-md": ["38px", { lineHeight: "1.15", fontWeight: "400" }],
+        h2: ["46px", { lineHeight: "1.2", fontWeight: "600" }],
+        "h2-md": ["38px", { lineHeight: "1.25", fontWeight: "600" }],
+        h3: ["26px", { lineHeight: "1.3", fontWeight: "600" }],
+        "body-lg": ["22px", { lineHeight: "1.6" }],
+        body: ["20px", { lineHeight: "1.6" }],
       },
       colors: {
         border: "hsl(var(--border))",
