@@ -45,7 +45,7 @@ const ThreeStepsSection = () => {
                   loading="lazy"
                 />
               </div>
-              <h3 className="font-heading text-[24px] md:text-[28px] text-foreground font-bold leading-tight mb-2">
+              <h3 className="font-heading text-[24px] md:text-[28px] text-foreground leading-tight mb-2">
                 {title}
               </h3>
               <p className="font-body text-[18px] md:text-[20px] text-foreground leading-relaxed">
