@@ -7,24 +7,32 @@ const StockUpSection = () => {
           <span className="block">With Our Multi-Bottle Discounts</span>
         </h2>
 
-        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
+        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto mb-8 leading-relaxed text-center">
           Our warehouse is currently stocked with HeartAide, so take advantage
           now before this limited-time opportunity disappears!
         </p>
 
-        <p className="font-heading text-[48px] md:text-[72px] text-foreground font-extrabold leading-none text-center mb-2">
-          Up to 79% OFF
-        </p>
-        <p className="font-heading text-[20px] md:text-[24px] text-foreground font-bold text-center mb-8">
-          While inventory lasts
-        </p>
+        {/* Bottle image + discount callout */}
+        <div className="flex flex-col items-center mb-8">
+          <img
+            src="/images/bottle-ingredients.png"
+            alt="HeartAide bottle with natural ingredients"
+            className="h-[280px] md:h-[380px] object-contain mb-6"
+          />
+          <p className="font-heading text-[48px] md:text-[72px] text-foreground font-extrabold leading-none mb-2">
+            Up to 79% OFF
+          </p>
+          <p className="font-heading text-[20px] md:text-[24px] text-foreground font-bold mb-8">
+            While inventory lasts
+          </p>
+        </div>
 
-        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
+        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto mb-8 leading-relaxed text-center">
           Our premium HeartAide formula combines clinically-studied blood flow
           enhancers with performance nutrients designed for men over 40.
         </p>
 
-        <h4 className="font-heading text-[20px] md:text-[24px] text-foreground font-bold max-w-3xl mx-auto mb-6">
+        <h4 className="font-heading text-[20px] md:text-[24px] text-foreground font-bold max-w-3xl mx-auto mb-6 text-center">
           Delivers everything you need:
         </h4>
 
@@ -48,7 +56,7 @@ const StockUpSection = () => {
           ))}
         </div>
 
-        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto leading-relaxed">
+        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto leading-relaxed text-center">
           We typically face shortages due to exceptional quality and high demand
           from men getting life-changing results.
         </p>
