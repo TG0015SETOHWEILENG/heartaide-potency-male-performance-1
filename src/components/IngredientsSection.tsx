@@ -127,7 +127,7 @@ const IngredientsSection = () => {
             const align = getLabelAlignment(midAngle);
             // Custom transforms per ingredient
             const customTransforms: Record<string, string> = {
-              "Red Yeast Rice": "translate(-30%, -20%)",
+              "Red Yeast Rice": "translate(-30%, -80%)",
               "Inositol": "translate(-50%, -30%)",
             };
             const transform = customTransforms[ingredient.name] ||
