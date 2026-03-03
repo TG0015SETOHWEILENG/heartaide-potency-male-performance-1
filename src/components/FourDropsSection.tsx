@@ -5,7 +5,7 @@ const FourDropsSection = () => {
     <section
       className="px-5 pt-20 pb-14 md:px-8 md:pt-28 md:pb-20 relative overflow-hidden bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: `linear-gradient(to bottom, hsl(var(--background)) 0%, rgba(255,245,240,0.55) 15%, rgba(255,245,240,0.4) 85%, hsl(var(--background)) 100%), url('/images/four-drops-bg.png')`,
+        backgroundImage: `linear-gradient(to bottom, hsl(var(--background)) 0%, rgba(255,245,240,0.35) 15%, rgba(255,245,240,0.2) 85%, hsl(var(--background)) 100%), url('/images/four-drops-bg.png')`,
       }}
     >
       <div className="mx-auto w-full max-w-5xl relative z-10">
@@ -33,19 +33,19 @@ const FourDropsSection = () => {
                 { icon: ShieldAlert, stat: "Zero", label: "Stomach upset" },
                 { icon: CheckCircle2, stat: "100%", label: "Full delivery" },
               ].map(({ icon: Icon, stat, label }) => (
-                <div key={label} className="rounded-xl bg-card/90 backdrop-blur-sm border border-border p-4 text-center shadow-md">
+                <div key={label} className="rounded-xl bg-white border border-border p-4 text-center shadow-lg">
                   <Icon className="w-6 h-6 text-cta mx-auto mb-1.5" strokeWidth={2} />
-                  <p className="font-heading text-[20px] text-foreground leading-none mb-1">{stat}</p>
-                  <p className="font-body text-[12px] text-muted-foreground">{label}</p>
+                  <p className="font-heading text-[22px] text-foreground leading-none mb-1 font-bold">{stat}</p>
+                  <p className="font-body text-[13px] text-foreground/70">{label}</p>
                 </div>
               ))}
             </div>
             {/* Trust badge */}
-            <div className="mt-5 w-full max-w-[320px] rounded-xl bg-cta/10 border border-cta/20 p-4 text-center">
-              <p className="font-heading text-[15px] text-cta leading-snug">
+            <div className="mt-5 w-full max-w-[320px] rounded-xl bg-cta/15 border border-cta/30 p-4 text-center shadow-lg">
+              <p className="font-heading text-[16px] text-foreground leading-snug font-bold">
                 🔬 Doctor-Recommended Formula
               </p>
-              <p className="font-body text-[12px] text-muted-foreground mt-1">
+              <p className="font-body text-[13px] text-foreground/70 mt-1">
                 Clinically studied ingredients
               </p>
             </div>
@@ -99,10 +99,10 @@ const FourDropsSection = () => {
             { icon: ShieldAlert, stat: "Zero", label: "Stomach upset" },
             { icon: CheckCircle2, stat: "100%", label: "Full delivery" },
           ].map(({ icon: Icon, stat, label }) => (
-            <div key={label} className="rounded-xl bg-card/80 backdrop-blur-sm border border-border p-4 text-center shadow-sm">
+            <div key={label} className="rounded-xl bg-white border border-border p-4 text-center shadow-lg">
               <Icon className="w-6 h-6 text-cta mx-auto mb-1.5" strokeWidth={2} />
-              <p className="font-heading text-[22px] text-foreground leading-none mb-0.5">{stat}</p>
-              <p className="font-body text-[12px] text-muted-foreground">{label}</p>
+              <p className="font-heading text-[22px] text-foreground leading-none mb-0.5 font-bold">{stat}</p>
+              <p className="font-body text-[13px] text-foreground/70">{label}</p>
             </div>
           ))}
         </div>
