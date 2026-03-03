@@ -147,7 +147,7 @@ const IngredientsSection = () => {
                   {ingredient.name}
                 </p>
                 <p
-                  className="font-body text-[15px] md:text-[16px] text-foreground mt-1.5"
+                  className="font-body text-[18px] md:text-[20px] text-foreground mt-1.5"
                   style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
                 >
                   {ingredient.subtitle}
@@ -155,7 +155,7 @@ const IngredientsSection = () => {
                 {ingredient.details.map((detail) => (
                   <p
                     key={detail}
-                    className="font-body text-[14px] md:text-[15px] text-foreground"
+                    className="font-body text-[18px] md:text-[20px] text-foreground"
                     style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
                   >
                     {detail}
