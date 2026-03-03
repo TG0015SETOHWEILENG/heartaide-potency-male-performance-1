@@ -96,7 +96,7 @@ const IngredientsSection = () => {
           {/* Segmented circle */}
           <div
             className="absolute inset-0"
-            style={{ width: 500, height: 500, top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+            style={{ width: 500, height: 500, top: "50%", left: "50%", transform: "translate(-50%, -80%)" }}
           >
             {ingredients.map((ingredient, i) => (
               <div
