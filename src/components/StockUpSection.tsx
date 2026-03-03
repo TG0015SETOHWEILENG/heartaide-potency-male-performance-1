@@ -1,63 +1,45 @@
-import PricingCard from "@/components/PricingCard";
-
-const pricingPlans = [
-  {
-    badge: "Starter",
-    bottleCount: "1",
-    supply: "1 Bottle Supply",
-    tagline: "A 30-Day Test Drive to Sexual Excellence",
-    pricePerBottle: "$59",
-    savings: "$40",
-  },
-  {
-    badge: "Best Value",
-    bottleCount: "6",
-    supply: "6 Bottle Supply",
-    tagline: "Maximize & Sustain Peak Sexual Performance",
-    pricePerBottle: "$33",
-    savings: "$396",
-    isFeatured: true,
-  },
-  {
-    badge: "Most Popular",
-    bottleCount: "3",
-    supply: "3 Bottle Supply",
-    tagline: "Get Consistent Rock-Hard Results Your Wife Will Notice",
-    pricePerBottle: "$49",
-    savings: "$150",
-  },
-];
-
 const StockUpSection = () => {
   return (
-    <section className="section-padding bg-secondary">
-      <div className="container-narrow text-center">
-        <h2 className="font-heading text-[28px] md:text-[42px] text-foreground leading-tight mb-4">
-          STOCK UP & SAVE{" "}
-          <span className="block md:inline">With Our Multi-Bottle Discounts</span>
+    <section className="section-padding bg-background border-t border-border">
+      <div className="container-narrow">
+        <h2 className="font-heading text-[32px] md:text-[48px] text-foreground leading-tight text-center mb-2">
+          STOCK UP & SAVE
         </h2>
+        <h3 className="font-heading text-[28px] md:text-[42px] text-foreground leading-tight text-center mb-8">
+          With Our Multi-Bottle Discounts
+        </h3>
 
-        <p className="font-body text-[18px] md:text-body-lg text-muted-foreground max-w-2xl mx-auto mb-6 leading-relaxed">
+        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
           Our warehouse is currently stocked with HeartAide, so take advantage
           now before this limited-time opportunity disappears!
         </p>
 
-        <p className="font-heading text-[48px] md:text-[72px] text-cta font-extrabold leading-none mb-1">
+        <p className="font-heading text-[48px] md:text-[72px] text-foreground font-extrabold leading-none text-center mb-2">
           Up to 79% OFF
         </p>
-        <p className="font-body text-[14px] md:text-[16px] text-muted-foreground uppercase tracking-widest mb-10">
+        <p className="font-heading text-[20px] md:text-[24px] text-foreground font-bold text-center mb-8">
           While inventory lasts
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start mb-10">
-          {pricingPlans.map((plan) => (
-            <PricingCard key={plan.badge} {...plan} />
-          ))}
-        </div>
-
-        <p className="font-body text-[16px] md:text-[18px] text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
           Our premium HeartAide formula combines clinically-studied blood flow
           enhancers with performance nutrients designed for men over 40.
+        </p>
+
+        <h4 className="font-heading text-[20px] md:text-[24px] text-foreground font-bold max-w-3xl mx-auto mb-4">
+          Delivers everything you need:
+        </h4>
+
+        <ul className="font-body text-[18px] md:text-[20px] text-foreground max-w-3xl mx-auto mb-8 leading-relaxed list-disc pl-8 space-y-1">
+          <li>Rock-hard erections</li>
+          <li>Extended stamina</li>
+          <li>Superior blood flow</li>
+          <li>Confidence restoration</li>
+        </ul>
+
+        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto leading-relaxed">
+          We typically face shortages due to exceptional quality and high demand
+          from men getting life-changing results.
         </p>
       </div>
     </section>
