@@ -57,7 +57,7 @@ function getLabelPosition(index: number) {
   const midAngle = index * SEGMENT_DEG + SEGMENT_DEG / 2;
   const rad = (midAngle * Math.PI) / 180;
   // Push label further out from center
-  const distance = 62; // % from center
+  const distance = 53; // % from center
   const x = 50 + distance * Math.sin(rad);
   const y = 50 - distance * Math.cos(rad);
   return { x, y, midAngle };
