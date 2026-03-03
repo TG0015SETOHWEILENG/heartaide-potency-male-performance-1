@@ -41,7 +41,7 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Hero + Pricing — single above-the-fold section */}
-      <section className="px-4 pt-6 pb-8 md:px-8 md:pt-10 md:pb-14 bg-secondary relative bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `linear-gradient(to right, rgba(10, 15, 30, 0.85) 0%, rgba(10, 15, 30, 0.6) 50%, rgba(10, 15, 30, 0.4) 100%), url('/images/hero-bg.webp')` }}>
+      <section className="px-4 pt-6 pb-8 md:px-8 md:pt-10 md:pb-14 bg-secondary relative bg-cover bg-right bg-no-repeat" style={{ backgroundImage: `linear-gradient(to right, rgba(10, 15, 30, 0.8) 0%, rgba(10, 15, 30, 0.5) 50%, rgba(10, 15, 30, 0.25) 100%), url('/images/hero-bg.webp')` }}>
         <div className="container-narrow text-center mb-5 md:mb-8">
           <h1 className="font-heading text-[32px] md:text-display text-white mb-3 leading-[1.15]">
             The Recommended Blood Flow Formula Men Over 40 Are Choosing Over{" "}
