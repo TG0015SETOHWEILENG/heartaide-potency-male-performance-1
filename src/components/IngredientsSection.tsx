@@ -82,7 +82,7 @@ const IngredientsSection = () => {
   const labelPositions = useMemo(() => ingredients.map((_, i) => getLabelPosition(i)), []);
 
   return (
-    <section className="section-padding bg-background overflow-hidden">
+    <section className="section-padding overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `linear-gradient(to bottom, hsl(var(--background)) 0%, rgba(255,255,255,0.7) 20%, rgba(255,255,255,0.7) 80%, hsl(var(--background)) 100%), url('/images/ingredients-bg.jpg')` }}>
       <div className="mx-auto w-full max-w-5xl px-5 md:px-8">
         <h2 className="font-heading text-[36px] md:text-[54px] text-foreground leading-[1.08] text-center mb-6">
           5 Proven Ingredients That <span className="whitespace-nowrap">Restore Sexual Power</span>
