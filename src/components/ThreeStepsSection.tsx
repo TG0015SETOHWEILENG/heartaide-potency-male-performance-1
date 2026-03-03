@@ -1,21 +1,24 @@
-const steps = [
+import { Droplets, Zap, ShieldCheck } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
+const steps: { number: string; title: string; body: string; icon: LucideIcon }[] = [
   {
     number: "01",
     title: "Optimize Blood Flow",
     body: "Natural ingredients clear arterial blockages that prevent strong erections",
-    image: "/images/step-1-blood-flow.webp",
+    icon: Droplets,
   },
   {
     number: "02",
     title: "Boost Performance",
     body: "Enhanced circulation delivers maximum firmness and extended stamina",
-    image: "/images/step-2-performance.webp",
+    icon: Zap,
   },
   {
     number: "03",
     title: "Maintain Results",
     body: "Continued use keeps your sexual performance at peak levels",
-    image: "/images/step-3-results.webp",
+    icon: ShieldCheck,
   },
 ];
 
@@ -32,18 +35,17 @@ const ThreeStepsSection = () => {
 
         {/* Steps grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-          {steps.map(({ number, title, body, image }) => (
-            <div key={number}>
-              <p className="font-heading text-[20px] md:text-[22px] text-white/60 mb-3">
+          {steps.map(({ number, title, body, icon: Icon }) => (
+            <div key={number} className="flex flex-col items-center text-center">
+              <p className="font-heading text-[20px] md:text-[22px] text-white/60 mb-4">
                 {number}
               </p>
-              <div className="rounded-2xl overflow-hidden mb-5">
-                <img
-                  src={image}
-                  alt={title}
-                  className="w-full h-[220px] md:h-[240px] object-cover"
-                  loading="lazy"
-                />
+              {/* Glowing icon circle */}
+              <div className="relative w-[140px] h-[140px] md:w-[160px] md:h-[160px] flex items-center justify-center mb-6">
+                <div className="absolute inset-0 rounded-full bg-amber-400/30 blur-2xl" />
+                <div className="relative w-[100px] h-[100px] md:w-[120px] md:h-[120px] rounded-full bg-amber-400/20 flex items-center justify-center">
+                  <Icon className="w-10 h-10 md:w-12 md:h-12 text-amber-300" strokeWidth={1.5} />
+                </div>
               </div>
               <h3 className="font-heading text-[24px] md:text-[28px] text-white leading-tight mb-2">
                 {title}
