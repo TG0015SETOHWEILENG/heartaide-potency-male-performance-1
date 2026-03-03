@@ -15,7 +15,7 @@ const FourDropsSection = () => {
         </h2>
 
         {/* Split layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start mb-14">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-14 items-start mb-14">
           {/* Left — sticky visual */}
           <div className="hidden md:flex flex-col items-center md:sticky md:top-28">
             <img
