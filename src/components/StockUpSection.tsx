@@ -44,17 +44,17 @@ const StockUpSection = () => {
             { num: "04", title: "Confidence restoration", desc: "Walk into the bedroom like the man she married", image: "/images/benefit-confidence.jpg" },
           ].map(({ num, title, desc, image }) => (
             <div key={num} className="text-left">
-              <p className="font-heading text-[14px] text-foreground/40 mb-2">{num}</p>
+              <p className="font-heading text-[20px] md:text-[22px] text-foreground/50 mb-2">{num}</p>
               <img
                 src={image}
                 alt={title}
-                className="w-full aspect-square object-cover rounded-xl mb-3"
+                className="w-full aspect-[4/5] object-cover rounded-xl mb-3"
                 loading="lazy"
               />
               <h5 className="font-heading text-[18px] md:text-[20px] text-foreground leading-tight mb-1">
                 {title}
               </h5>
-              <p className="font-body text-[15px] md:text-[16px] text-foreground/70 leading-snug">
+              <p className="font-body text-[15px] md:text-[16px] text-foreground leading-snug">
                 {desc}
               </p>
             </div>
