@@ -61,9 +61,33 @@ const StockUpSection = () => {
           ))}
         </div>
 
-        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto leading-relaxed text-center">
+        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto mb-12 leading-relaxed text-center">
           We typically face shortages due to exceptional quality and high demand
           from men getting life-changing results.
+        </p>
+
+        <h3 className="font-heading text-[28px] md:text-[40px] text-foreground leading-tight text-center mb-6">
+          Right Now You Can:
+        </h3>
+
+        <div className="flex flex-col items-center gap-3 mb-8">
+          {[
+            "Get 6 bottles for 79% OFF",
+            "FREE Shipping on entire order",
+            "Lock in this price forever",
+          ].map((text) => (
+            <p key={text} className="font-body text-[20px] md:text-[24px] text-foreground font-semibold">
+              ✅ {text}
+            </p>
+          ))}
+        </div>
+
+        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto mb-6 leading-relaxed text-center">
+          Once you experience steel-hard erections and sexual confidence, you'll never want to run out.
+        </p>
+
+        <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto leading-relaxed text-center">
+          Demand is skyrocketing and we may sell out. When inventory runs low, we return to standard pricing.
         </p>
       </div>
     </section>
