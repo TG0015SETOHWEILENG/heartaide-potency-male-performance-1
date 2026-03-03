@@ -3,6 +3,7 @@ import WhySection from "@/components/WhySection";
 import FourDropsSection from "@/components/FourDropsSection";
 import IngredientsSection from "@/components/IngredientsSection";
 import ThreeStepsSection from "@/components/ThreeStepsSection";
+import StockUpSection from "@/components/StockUpSection";
 import { Shield, Zap, Clock, Heart, Leaf, Star, BadgeCheck, Award, MapPin, ShieldCheck } from "lucide-react";
 
 const pricingPlans = [
@@ -211,6 +212,9 @@ const Index = () => {
 
       {/* 3 Simple Steps */}
       <ThreeStepsSection />
+
+      {/* Stock Up & Save */}
+      <StockUpSection />
 
     </div>
   );
