@@ -147,7 +147,7 @@ const IngredientsSection = () => {
                   {ingredient.name}
                 </p>
                 <p
-                  className="font-body text-[15px] md:text-[16px] text-muted-foreground mt-1.5"
+                  className="font-body text-[15px] md:text-[16px] text-foreground mt-1.5"
                   style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
                 >
                   {ingredient.subtitle}
@@ -155,7 +155,7 @@ const IngredientsSection = () => {
                 {ingredient.details.map((detail) => (
                   <p
                     key={detail}
-                    className="font-body text-[14px] md:text-[15px] text-muted-foreground"
+                    className="font-body text-[14px] md:text-[15px] text-foreground"
                     style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
                   >
                     {detail}
@@ -185,9 +185,9 @@ const IngredientsSection = () => {
               />
               <div>
                 <h3 className="font-heading text-[22px] text-foreground leading-tight">{name}</h3>
-                <p className="font-body text-[18px] text-muted-foreground leading-snug mt-1">{subtitle}</p>
+                <p className="font-body text-[18px] text-foreground leading-snug mt-1">{subtitle}</p>
                 {details.map((d) => (
-                  <p key={d} className="font-body text-[16px] text-muted-foreground leading-snug">
+                  <p key={d} className="font-body text-[16px] text-foreground leading-snug">
                     {d}
                   </p>
                 ))}
