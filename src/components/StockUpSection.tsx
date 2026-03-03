@@ -48,7 +48,7 @@ const StockUpSection = () => {
               <img
                 src={image}
                 alt={title}
-                className="w-full aspect-[4/5] object-cover rounded-xl mb-3"
+                className="w-full aspect-[6/4] object-cover rounded-xl mb-3"
                 loading="lazy"
               />
               <h5 className="font-heading text-[18px] md:text-[20px] text-foreground leading-tight mb-1">
