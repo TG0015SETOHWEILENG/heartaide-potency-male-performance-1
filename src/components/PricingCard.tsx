@@ -65,7 +65,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
 
         {/* Price */}
         <p className="font-body font-extrabold text-[42px] md:text-[50px] text-primary-foreground leading-none">
-          {pricePerBottle}
+          {pricePerBottle}<span className="text-[20px] md:text-[24px] font-bold">/bottle</span>
         </p>
 
         {/* Shipping & guarantee */}
