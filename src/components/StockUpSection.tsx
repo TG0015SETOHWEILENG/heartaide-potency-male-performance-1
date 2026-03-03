@@ -24,16 +24,29 @@ const StockUpSection = () => {
           enhancers with performance nutrients designed for men over 40.
         </p>
 
-        <h4 className="font-heading text-[20px] md:text-[24px] text-foreground font-bold max-w-3xl mx-auto mb-4">
+        <h4 className="font-heading text-[20px] md:text-[24px] text-foreground font-bold max-w-3xl mx-auto mb-6">
           Delivers everything you need:
         </h4>
 
-        <ul className="font-body text-[18px] md:text-[20px] text-foreground max-w-3xl mx-auto mb-8 leading-relaxed list-disc pl-8 space-y-1">
-          <li>Rock-hard erections</li>
-          <li>Extended stamina</li>
-          <li>Superior blood flow</li>
-          <li>Confidence restoration</li>
-        </ul>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-8">
+          {[
+            { num: "01", title: "Rock-hard erections", desc: "Maximum firmness and confidence every time" },
+            { num: "02", title: "Extended stamina", desc: "Go as long as you want, not just a few minutes" },
+            { num: "03", title: "Superior blood flow", desc: "Optimized circulation where it matters most" },
+            { num: "04", title: "Confidence restoration", desc: "Walk into the bedroom like the man she married" },
+          ].map(({ num, title, desc }) => (
+            <div key={num} className="text-left">
+              <p className="font-heading text-[14px] text-foreground/40 mb-2">{num}</p>
+              <div className="w-full h-[2px] bg-cta/30 mb-3" />
+              <h5 className="font-heading text-[18px] md:text-[20px] text-foreground leading-tight mb-1">
+                {title}
+              </h5>
+              <p className="font-body text-[15px] md:text-[16px] text-foreground/70 leading-snug">
+                {desc}
+              </p>
+            </div>
+          ))}
+        </div>
 
         <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto leading-relaxed">
           We typically face shortages due to exceptional quality and high demand
