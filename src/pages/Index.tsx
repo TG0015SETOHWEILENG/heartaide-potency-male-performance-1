@@ -88,20 +88,26 @@ const Index = () => {
               className="w-full rounded-2xl shadow-xl order-2 md:order-1"
               loading="lazy"
             />
-            <div className="flex flex-col gap-6 order-1 md:order-2">
+            <div className="flex flex-col order-1 md:order-2">
               {[
                 { icon: Zap, title: "Steel-Hard Erections", desc: "Blood flows freely for maximum firmness and confidence" },
                 { icon: Clock, title: "Lasting Stamina", desc: "Performance that goes as long as you want, not just a few minutes" },
                 { icon: Shield, title: "All-Night Recovery", desc: "Ready for round 2, 3, and beyond like you're 25 again" },
                 { icon: Heart, title: "Restored Confidence", desc: "Walk into the bedroom knowing you're the man she married" },
                 { icon: Leaf, title: "Natural Safety", desc: "No dangerous side effects or prescription risks" },
-              ].map(({ icon: Icon, title, desc }) => (
+              ].map(({ icon: Icon, title, desc }, index, arr) => (
                 <div key={title} className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-cta/15 flex items-center justify-center">
-                    <Icon className="w-6 h-6 text-cta" strokeWidth={2.5} />
+                  {/* Icon + connector line */}
+                  <div className="flex flex-col items-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-full bg-cta/15 flex items-center justify-center">
+                      <Icon className="w-6 h-6 text-cta" strokeWidth={2} />
+                    </div>
+                    {index < arr.length - 1 && (
+                      <div className="w-[2px] h-10 bg-cta/30 mt-1" />
+                    )}
                   </div>
-                  <div>
-                    <h3 className="font-body font-extrabold text-[20px] md:text-[22px] text-foreground leading-tight mb-1">
+                  <div className="pt-1">
+                    <h3 className="font-heading text-[20px] md:text-[22px] text-foreground leading-tight mb-1">
                       {title}
                     </h3>
                     <p className="font-body text-[18px] md:text-body text-foreground leading-relaxed">
