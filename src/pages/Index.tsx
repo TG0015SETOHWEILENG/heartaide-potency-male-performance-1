@@ -6,6 +6,7 @@ import ThreeStepsSection from "@/components/ThreeStepsSection";
 import StockUpSection from "@/components/StockUpSection";
 import GuaranteeSection from "@/components/GuaranteeSection";
 import FAQSection from "@/components/FAQSection";
+import Footer from "@/components/Footer";
 import { Shield, Zap, Clock, Heart, Leaf, Star, BadgeCheck, Award, MapPin, ShieldCheck } from "lucide-react";
 
 const pricingPlans = [
@@ -262,6 +263,9 @@ const Index = () => {
 
       {/* FAQ */}
       <FAQSection />
+
+      {/* Footer */}
+      <Footer />
 
     </div>
   );
