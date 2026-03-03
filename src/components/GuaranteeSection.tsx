@@ -4,8 +4,8 @@ const guaranteeSteps = [
   { icon: ShieldCheck, label: "Order today with confidence" },
   { icon: Calendar, label: "Use for up to 365 days" },
   { icon: HeadphonesIcon, label: "Not satisfied? Contact us" },
-  { icon: Package, label: "Return bottles (we cover shipping)" },
-  { icon: Banknote, label: "Get every penny back in 5-7 days" },
+  { icon: Package, label: <>Return bottles<br /><span className="text-[13px] md:text-[14px]">(we cover shipping)</span></> },
+  { icon: Banknote, label: <>Get every penny back<br /><span className="text-[13px] md:text-[14px]">in 5-7 days</span></> },
 ];
 
 const GuaranteeSection = () => {
@@ -55,8 +55,8 @@ const GuaranteeSection = () => {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-6">
-          {guaranteeSteps.map(({ icon: Icon, label }) => (
-            <div key={label} className="flex flex-col items-center text-center gap-2">
+          {guaranteeSteps.map(({ icon: Icon, label }, index) => (
+            <div key={index} className="flex flex-col items-center text-center gap-2">
               <div className="w-12 h-12 rounded-full bg-cta/20 flex items-center justify-center">
                 <Icon className="w-6 h-6 text-cta" strokeWidth={1.5} />
               </div>
