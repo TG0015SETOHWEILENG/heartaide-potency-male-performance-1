@@ -245,11 +245,11 @@ const Index = () => {
       <div className="bg-cta overflow-hidden py-3">
         <div className="flex animate-marquee whitespace-nowrap">
           {[...Array(20)].map((_, i) => (
-            <span key={i} className="flex items-center gap-3 mx-4">
-              <span className="font-body text-[16px] md:text-[18px] text-cta-foreground font-semibold tracking-wide">
+            <span key={i} className="flex items-center gap-3 mx-5">
+              <img src="/images/guarantee-icon.svg" alt="" className="w-5 h-5 invert brightness-200" />
+              <span className="font-heading text-[16px] md:text-[18px] text-cta-foreground font-semibold tracking-wide">
                 Money-Back Guarantee
               </span>
-              <span className="text-cta-foreground/60">✦</span>
             </span>
           ))}
         </div>
