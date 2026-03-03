@@ -7,7 +7,7 @@ const GuaranteeSection = () => {
       }}
     >
       <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
-        <div className="max-w-2xl">
+        <div className="max-w-3xl">
           {/* Seal */}
           <div className="mb-6">
             <img
