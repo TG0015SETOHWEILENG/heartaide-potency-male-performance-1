@@ -1,3 +1,5 @@
+import { Package, Truck, Lock } from "lucide-react";
+
 const StockUpSection = () => {
   return (
     <section className="section-padding border-t border-border bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/stockup-bg.png)' }}>
@@ -70,15 +72,20 @@ const StockUpSection = () => {
           Right Now You Can:
         </h3>
 
-        <div className="flex flex-col items-center gap-3 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mb-8">
           {[
-            "Get 6 bottles for 79% OFF",
-            "FREE Shipping on entire order",
-            "Lock in this price forever",
-          ].map((text) => (
-            <p key={text} className="font-body text-[20px] md:text-[24px] text-foreground font-semibold">
-              ✅ {text}
-            </p>
+            { icon: Package, text: "Get 6 bottles for 79% OFF" },
+            { icon: Truck, text: "FREE Shipping on entire order" },
+            { icon: Lock, text: "Lock in this price forever" },
+          ].map(({ icon: Icon, text }) => (
+            <div key={text} className="flex items-center gap-4 bg-primary/10 rounded-xl px-6 py-5">
+              <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                <Icon className="w-5 h-5 text-primary" strokeWidth={2} />
+              </div>
+              <p className="font-body text-[18px] md:text-[20px] text-foreground font-semibold leading-snug">
+                {text}
+              </p>
+            </div>
           ))}
         </div>
 
