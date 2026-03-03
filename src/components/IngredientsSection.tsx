@@ -125,13 +125,18 @@ const IngredientsSection = () => {
           {ingredients.map((ingredient, i) => {
             const { x, y, midAngle } = labelPositions[i];
             const align = getLabelAlignment(midAngle);
+            // Custom pixel offsets per ingredient [x, y]
+            const customOffsets: Record<string, [number, number]> = {
+              "Red Yeast Rice": [-30, -80],
+            };
+            const [offsetX, offsetY] = customOffsets[ingredient.name] || [0, 0];
             return (
               <div
                 key={`label-${ingredient.name}`}
                 className="absolute w-[350px]"
                 style={{
-                  left: `${x}%`,
-                  top: `${y}%`,
+                  left: `calc(${x}% + ${offsetX}px)`,
+                  top: `calc(${y}% + ${offsetY}px)`,
                   transform:
                     align === "center"
                       ? "translate(-80%, -80%)"
