@@ -223,12 +223,12 @@ const Index = () => {
       <StockUpSection />
 
       {/* Choose Your Transformation — repeated pricing */}
-      <section className="section-padding bg-secondary">
+      <section className="section-padding bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('/images/transformation-bg.jpg')` }}>
         <div className="container-narrow text-center mb-8 md:mb-10">
-          <p className="font-body text-[18px] md:text-[22px] text-foreground mb-4 leading-relaxed max-w-3xl mx-auto">
+          <p className="font-body text-[18px] md:text-[22px] text-white/90 mb-4 leading-relaxed max-w-3xl mx-auto">
             Choose the "6 Bottles" package below for maximum savings and sexual transformation!
           </p>
-          <h2 className="font-heading text-[32px] md:text-[48px] text-foreground leading-tight">
+          <h2 className="font-heading text-[32px] md:text-[48px] text-white leading-tight">
             Choose Your Sexual Transformation:
           </h2>
         </div>
