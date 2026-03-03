@@ -128,7 +128,7 @@ const IngredientsSection = () => {
             return (
               <div
                 key={`label-${ingredient.name}`}
-                className="absolute w-[260px]"
+                className="absolute w-[250px]"
                 style={{
                   left: `${x}%`,
                   top: `${y}%`,
