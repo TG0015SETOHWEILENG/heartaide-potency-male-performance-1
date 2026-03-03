@@ -17,27 +17,36 @@ const FourDropsSection = () => {
         {/* Split layout */}
         <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-14 items-start mb-14">
           {/* Left — sticky visual */}
-          <div className="hidden md:flex flex-col items-center md:sticky md:top-28">
+          <div className="hidden md:flex flex-col items-center md:sticky md:top-24">
             <img
               src="/images/bottle-1.png"
               alt="HeartAide sublingual dropper bottle"
-              className="w-64 lg:w-72 object-contain drop-shadow-xl"
+              className="w-72 lg:w-80 xl:w-[340px] object-contain drop-shadow-2xl"
               loading="lazy"
             />
-            {/* Mini stat pills below the bottle */}
-            <div className="mt-8 grid grid-cols-2 gap-3 w-full max-w-[280px]">
+            {/* Stat pills below the bottle */}
+            <div className="mt-6 grid grid-cols-2 gap-3 w-full max-w-[320px]">
               {[
                 { icon: Droplets, stat: "4 Drops", label: "Once a day" },
                 { icon: Zap, stat: "Minutes", label: "Not hours" },
                 { icon: ShieldAlert, stat: "Zero", label: "Stomach upset" },
                 { icon: CheckCircle2, stat: "100%", label: "Full delivery" },
               ].map(({ icon: Icon, stat, label }) => (
-                <div key={label} className="rounded-xl bg-card/80 backdrop-blur-sm border border-border p-3 text-center shadow-sm">
-                  <Icon className="w-5 h-5 text-cta mx-auto mb-1" strokeWidth={2} />
-                  <p className="font-heading text-[18px] text-foreground leading-none mb-0.5">{stat}</p>
-                  <p className="font-body text-[11px] text-muted-foreground">{label}</p>
+                <div key={label} className="rounded-xl bg-card/90 backdrop-blur-sm border border-border p-4 text-center shadow-md">
+                  <Icon className="w-6 h-6 text-cta mx-auto mb-1.5" strokeWidth={2} />
+                  <p className="font-heading text-[20px] text-foreground leading-none mb-1">{stat}</p>
+                  <p className="font-body text-[12px] text-muted-foreground">{label}</p>
                 </div>
               ))}
+            </div>
+            {/* Trust badge */}
+            <div className="mt-5 w-full max-w-[320px] rounded-xl bg-cta/10 border border-cta/20 p-4 text-center">
+              <p className="font-heading text-[15px] text-cta leading-snug">
+                🔬 Doctor-Recommended Formula
+              </p>
+              <p className="font-body text-[12px] text-muted-foreground mt-1">
+                Clinically studied ingredients
+              </p>
             </div>
           </div>
 
