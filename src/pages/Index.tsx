@@ -195,8 +195,8 @@ const Index = () => {
               { icon: Star, label: "365-Day Guarantee" },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-primary/60" strokeWidth={1.5} />
+                <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-green-600" strokeWidth={1.5} />
                 </div>
                 <span className="font-body text-[12px] md:text-[13px] text-foreground/70 font-semibold text-center leading-tight max-w-[100px]">
                   {label}
