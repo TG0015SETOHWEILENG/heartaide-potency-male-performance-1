@@ -94,18 +94,17 @@ const IngredientsSection = () => {
         {/* Segmented circle — desktop only */}
         <div className="hidden md:block relative mx-auto" style={{ width: 700, height: 700 }}>
           {/* Segmented circle */}
-          <div className="absolute inset-0" style={{ width: 500, height: 500, top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+          <div
+            className="absolute inset-0"
+            style={{ width: 500, height: 500, top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+          >
             {ingredients.map((ingredient, i) => (
               <div
                 key={ingredient.name}
                 className="absolute inset-0 overflow-hidden"
                 style={{ clipPath: clipPaths[i] }}
               >
-                <img
-                  src={ingredient.image}
-                  alt={ingredient.name}
-                  className="w-full h-full object-cover"
-                />
+                <img src={ingredient.image} alt={ingredient.name} className="w-full h-full object-cover" />
               </div>
             ))}
 
@@ -129,15 +128,16 @@ const IngredientsSection = () => {
             return (
               <div
                 key={`label-${ingredient.name}`}
-                className="absolute w-[160px]"
+                className="absolute w-[260px]"
                 style={{
                   left: `${x}%`,
                   top: `${y}%`,
-                  transform: align === "center"
-                    ? "translate(-50%, -50%)"
-                    : align === "left"
-                      ? "translate(0%, -50%)"
-                      : "translate(-100%, -50%)",
+                  transform:
+                    align === "center"
+                      ? "translate(-50%, -50%)"
+                      : align === "left"
+                        ? "translate(0%, -50%)"
+                        : "translate(-100%, -50%)",
                 }}
               >
                 <p
@@ -161,7 +161,6 @@ const IngredientsSection = () => {
                     {detail}
                   </p>
                 ))}
-
               </div>
             );
           })}
@@ -178,12 +177,19 @@ const IngredientsSection = () => {
           </div>
           {ingredients.map(({ name, image, subtitle, details }) => (
             <div key={name} className="flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-sm">
-              <img src={image} alt={name} className="w-16 h-16 rounded-full object-cover flex-shrink-0" loading="lazy" />
+              <img
+                src={image}
+                alt={name}
+                className="w-16 h-16 rounded-full object-cover flex-shrink-0"
+                loading="lazy"
+              />
               <div>
                 <h3 className="font-heading text-[22px] text-foreground leading-tight">{name}</h3>
                 <p className="font-body text-[18px] text-muted-foreground leading-snug mt-1">{subtitle}</p>
                 {details.map((d) => (
-                  <p key={d} className="font-body text-[16px] text-muted-foreground leading-snug">{d}</p>
+                  <p key={d} className="font-body text-[16px] text-muted-foreground leading-snug">
+                    {d}
+                  </p>
                 ))}
               </div>
             </div>
