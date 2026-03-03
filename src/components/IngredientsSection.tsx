@@ -5,26 +5,31 @@ const ingredients = [
     name: "Red Yeast Rice",
     image: "/images/ingredient-red-yeast-rice.png",
     subtitle: "Clears arterial blockages",
+    details: ["Optimizes circulation", "Essential for hard erections"],
   },
   {
     name: "CoQ10",
     image: "/images/ingredient-coq10.png",
     subtitle: "Energizes blood vessels",
+    details: ["Creates flexible arteries", "Maximum blood flow"],
   },
   {
     name: "Inositol",
     image: "/images/ingredient-inositol.png",
     subtitle: "Healthy blood pressure",
+    details: ["Proper vascular function", "Sustained circulation"],
   },
   {
     name: "Mango Extract",
     image: "/images/ingredient-mango.png",
     subtitle: "Protects blood vessels",
+    details: ["Cardiovascular support", "Long-term sexual health"],
   },
   {
     name: "Pomegranate Extract",
     image: "/images/ingredient-pomegranate.png",
     subtitle: "Powerful antioxidants",
+    details: ["Clean, healthy arteries", "Blocks circulation damage"],
   },
 ];
 
@@ -135,17 +140,27 @@ const IngredientsSection = () => {
                 }}
               >
                 <p
-                  className="font-heading text-[20px] text-foreground leading-tight"
+                  className="font-heading text-[22px] md:text-[24px] text-foreground leading-tight font-bold"
                   style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
                 >
                   {ingredient.name}
                 </p>
                 <p
-                  className="font-body text-[14px] text-muted-foreground mt-1"
+                  className="font-body text-[16px] md:text-[17px] text-muted-foreground mt-1.5"
                   style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
                 >
                   {ingredient.subtitle}
                 </p>
+                {ingredient.details.map((detail) => (
+                  <p
+                    key={detail}
+                    className="font-body text-[15px] md:text-[16px] text-muted-foreground"
+                    style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
+                  >
+                    {detail}
+                  </p>
+                ))}
+
               </div>
             );
           })}
@@ -160,12 +175,15 @@ const IngredientsSection = () => {
               className="h-[200px] object-contain drop-shadow-xl"
             />
           </div>
-          {ingredients.map(({ name, image, subtitle }) => (
+          {ingredients.map(({ name, image, subtitle, details }) => (
             <div key={name} className="flex items-center gap-4 rounded-2xl border border-border bg-card p-4 shadow-sm">
               <img src={image} alt={name} className="w-16 h-16 rounded-full object-cover flex-shrink-0" loading="lazy" />
               <div>
                 <h3 className="font-heading text-[22px] text-foreground leading-tight">{name}</h3>
                 <p className="font-body text-[18px] text-muted-foreground leading-snug mt-1">{subtitle}</p>
+                {details.map((d) => (
+                  <p key={d} className="font-body text-[16px] text-muted-foreground leading-snug">{d}</p>
+                ))}
               </div>
             </div>
           ))}
