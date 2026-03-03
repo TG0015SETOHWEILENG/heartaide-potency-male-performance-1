@@ -52,27 +52,20 @@ const GuaranteeSection = () => {
           <h3 className="font-heading text-[22px] md:text-[26px] text-white font-bold mb-4">
             How It Works:
           </h3>
+        </div>
 
-          <div className="grid grid-cols-3 gap-4 mb-4">
-            {guaranteeSteps.slice(0, 3).map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center text-center gap-2">
-                <div className="w-12 h-12 rounded-full bg-cta/20 flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-cta" strokeWidth={1.5} />
-                </div>
-                <span className="font-body text-[14px] md:text-[16px] text-white/90 leading-tight">{label}</span>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-6">
+          {guaranteeSteps.map(({ icon: Icon, label }) => (
+            <div key={label} className="flex flex-col items-center text-center gap-2">
+              <div className="w-12 h-12 rounded-full bg-cta/20 flex items-center justify-center">
+                <Icon className="w-6 h-6 text-cta" strokeWidth={1.5} />
               </div>
-            ))}
-          </div>
-          <div className="grid grid-cols-2 gap-4 max-w-[66%] mx-auto mb-6">
-            {guaranteeSteps.slice(3).map(({ icon: Icon, label }) => (
-              <div key={label} className="flex flex-col items-center text-center gap-2">
-                <div className="w-12 h-12 rounded-full bg-cta/20 flex items-center justify-center">
-                  <Icon className="w-6 h-6 text-cta" strokeWidth={1.5} />
-                </div>
-                <span className="font-body text-[14px] md:text-[16px] text-white/90 leading-tight">{label}</span>
-              </div>
-            ))}
-          </div>
+              <span className="font-body text-[14px] md:text-[16px] text-white/90 leading-tight">{label}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="max-w-3xl">
 
           {/* Bold statement */}
           <p className="font-body text-[18px] md:text-[20px] text-white font-bold mb-5">
