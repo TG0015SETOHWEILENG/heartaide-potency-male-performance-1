@@ -134,7 +134,7 @@ const IngredientsSection = () => {
                   top: `${y}%`,
                   transform:
                     align === "center"
-                      ? "translate(-50%, -80%)"
+                      ? "translate(-80%, -80%)"
                       : align === "left"
                         ? "translate(0%, -50%)"
                         : "translate(-100%, -50%)",
