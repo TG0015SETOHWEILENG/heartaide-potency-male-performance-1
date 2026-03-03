@@ -18,7 +18,7 @@ const steps = [
 
 const ThreeStepsSection = () => {
   return (
-    <section className="section-padding bg-background">
+    <section className="section-padding bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/three-steps-bg.png')` }}>
       <div className="mx-auto w-full max-w-5xl px-5 md:px-8">
         <h2 className="font-heading text-[36px] md:text-[54px] text-foreground leading-[1.08] text-center mb-12 md:mb-16">
           3 Simple Steps to Sexual Excellence
