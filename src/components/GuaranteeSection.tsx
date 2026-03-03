@@ -3,7 +3,7 @@ const GuaranteeSection = () => {
     <section
       className="section-padding bg-cover bg-center bg-no-repeat relative"
       style={{
-        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.85) 50%, rgba(255,255,255,0.4) 100%), url('/images/guarantee-bg.jpg')`,
+        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.7) 45%, rgba(255,255,255,0.15) 100%), url('/images/guarantee-bg.jpg')`,
       }}
     >
       <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
