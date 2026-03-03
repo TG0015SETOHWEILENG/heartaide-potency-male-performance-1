@@ -1,6 +1,7 @@
 const ingredients = [
   {
     name: "Red Yeast Rice",
+    image: "/images/ingredient-red-yeast-rice.png",
     benefits: [
       "Clears arterial blockages",
       "Optimizes circulation",
@@ -9,6 +10,7 @@ const ingredients = [
   },
   {
     name: "CoQ10",
+    image: "/images/ingredient-coq10.png",
     benefits: [
       "Energizes blood vessels",
       "Creates flexible arteries",
@@ -17,6 +19,7 @@ const ingredients = [
   },
   {
     name: "Inositol",
+    image: "/images/ingredient-inositol.png",
     benefits: [
       "Healthy blood pressure",
       "Proper vascular function",
@@ -25,6 +28,7 @@ const ingredients = [
   },
   {
     name: "Mango Extract",
+    image: "/images/ingredient-mango.png",
     benefits: [
       "Protects blood vessels",
       "Cardiovascular support",
@@ -33,6 +37,7 @@ const ingredients = [
   },
   {
     name: "Pomegranate Extract",
+    image: "/images/ingredient-pomegranate.png",
     benefits: [
       "Powerful antioxidants",
       "Clean, healthy arteries",
@@ -51,11 +56,17 @@ const IngredientsSection = () => {
 
         {/* Top row: 3 ingredients */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-5 mb-4 md:mb-5">
-          {ingredients.slice(0, 3).map(({ name, benefits }) => (
+          {ingredients.slice(0, 3).map(({ name, image, benefits }) => (
             <div
               key={name}
               className="rounded-2xl border border-border bg-card p-6 md:p-8 text-center shadow-sm"
             >
+              <img
+                src={image}
+                alt={name}
+                className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mx-auto mb-5"
+                loading="lazy"
+              />
               <h3 className="font-heading text-[22px] md:text-[26px] text-foreground mb-4 leading-tight">
                 {name}
               </h3>
@@ -75,11 +86,17 @@ const IngredientsSection = () => {
 
         {/* Bottom row: 2 ingredients, centered */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-5 max-w-[680px] mx-auto mb-12 md:mb-14">
-          {ingredients.slice(3).map(({ name, benefits }) => (
+          {ingredients.slice(3).map(({ name, image, benefits }) => (
             <div
               key={name}
               className="rounded-2xl border border-border bg-card p-6 md:p-8 text-center shadow-sm"
             >
+              <img
+                src={image}
+                alt={name}
+                className="w-20 h-20 md:w-24 md:h-24 rounded-full object-cover mx-auto mb-5"
+                loading="lazy"
+              />
               <h3 className="font-heading text-[22px] md:text-[26px] text-foreground mb-4 leading-tight">
                 {name}
               </h3>
