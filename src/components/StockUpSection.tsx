@@ -38,7 +38,7 @@ const StockUpSection = () => {
           Delivers everything you need:
         </h4>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mx-auto mb-8">
           {[
             { num: "01", title: "Rock-hard erections", desc: "Maximum firmness and confidence every time", image: "/images/benefit-erections.jpg" },
             { num: "02", title: "Extended stamina", desc: "Go as long as you want, not just a few minutes", image: "/images/benefit-stamina.jpg" },
