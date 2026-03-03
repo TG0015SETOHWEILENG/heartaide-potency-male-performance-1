@@ -25,8 +25,8 @@ const steps: { number: string; title: string; body: string; icon: LucideIcon }[]
 const ThreeStepsSection = () => {
   return (
     <section
-      className="section-padding bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url('/images/three-steps-bg.png')` }}
+      className="section-padding bg-cover bg-center bg-no-repeat relative"
+      style={{ backgroundImage: `linear-gradient(to bottom, rgba(10, 15, 30, 0.55), rgba(10, 15, 30, 0.65)), url('/images/three-steps-bg.png')` }}
     >
       <div className="mx-auto w-full max-w-5xl px-5 md:px-8">
         <h2 className="font-heading text-[36px] md:text-[54px] text-white leading-[1.08] text-center mb-12 md:mb-16">
@@ -60,11 +60,11 @@ const ThreeStepsSection = () => {
         {/* Subheadline */}
         <div className="flex flex-wrap justify-center gap-3 mt-12 md:mt-16">
           {["No complicated routines", "No dangerous chemicals", "Just natural, powerful results"].map((text) => (
-            <div key={text} className="flex items-center gap-2 bg-white/90 backdrop-blur-sm border border-white/30 rounded-full px-5 py-3">
-              <span className="w-5 h-5 rounded-full bg-[#001C38] flex items-center justify-center flex-shrink-0">
-                <svg className="w-3 h-3 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+            <div key={text} className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-3 shadow-lg">
+              <span className="w-5 h-5 rounded-full bg-cta flex items-center justify-center flex-shrink-0">
+                <svg className="w-3 h-3 text-[#001C38]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
               </span>
-              <span className="font-body text-[18px] md:text-[20px] text-[#001C38] font-semibold">{text}</span>
+              <span className="font-body text-[18px] md:text-[20px] text-white font-semibold">{text}</span>
             </div>
           ))}
         </div>
