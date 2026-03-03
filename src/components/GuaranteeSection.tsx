@@ -1,3 +1,13 @@
+import { ShieldCheck, Calendar, HeadphonesIcon, Package, Banknote } from "lucide-react";
+
+const guaranteeSteps = [
+  { icon: ShieldCheck, label: "Order today with confidence" },
+  { icon: Calendar, label: "Use for up to 365 days" },
+  { icon: HeadphonesIcon, label: "Not satisfied? Contact us" },
+  { icon: Package, label: "Return bottles (we cover shipping)" },
+  { icon: Banknote, label: "Get every penny back in 5-7 days" },
+];
+
 const GuaranteeSection = () => {
   return (
     <section
@@ -43,19 +53,26 @@ const GuaranteeSection = () => {
             How It Works:
           </h3>
 
-          <ol className="list-decimal list-inside space-y-1.5 mb-6 pl-1">
-            {[
-              "Order today with confidence",
-              "Use for up to 365 days",
-              "Not satisfied? Contact us",
-              "Return bottles (we cover shipping)",
-              "Get every penny back in 5-7 days",
-            ].map((step) => (
-              <li key={step} className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed">
-                {step}
-              </li>
+          <div className="grid grid-cols-3 gap-4 mb-4">
+            {guaranteeSteps.slice(0, 3).map(({ icon: Icon, label }) => (
+              <div key={label} className="flex flex-col items-center text-center gap-2">
+                <div className="w-12 h-12 rounded-full bg-cta/20 flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-cta" strokeWidth={1.5} />
+                </div>
+                <span className="font-body text-[14px] md:text-[16px] text-white/90 leading-tight">{label}</span>
+              </div>
             ))}
-          </ol>
+          </div>
+          <div className="grid grid-cols-2 gap-4 max-w-[66%] mx-auto mb-6">
+            {guaranteeSteps.slice(3).map(({ icon: Icon, label }) => (
+              <div key={label} className="flex flex-col items-center text-center gap-2">
+                <div className="w-12 h-12 rounded-full bg-cta/20 flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-cta" strokeWidth={1.5} />
+                </div>
+                <span className="font-body text-[14px] md:text-[16px] text-white/90 leading-tight">{label}</span>
+              </div>
+            ))}
+          </div>
 
           {/* Bold statement */}
           <p className="font-body text-[18px] md:text-[20px] text-white font-bold mb-5">
