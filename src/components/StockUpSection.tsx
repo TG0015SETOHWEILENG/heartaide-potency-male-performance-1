@@ -36,16 +36,21 @@ const StockUpSection = () => {
           Delivers everything you need:
         </h4>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-3xl mx-auto mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-8">
           {[
-            { num: "01", title: "Rock-hard erections", desc: "Maximum firmness and confidence every time" },
-            { num: "02", title: "Extended stamina", desc: "Go as long as you want, not just a few minutes" },
-            { num: "03", title: "Superior blood flow", desc: "Optimized circulation where it matters most" },
-            { num: "04", title: "Confidence restoration", desc: "Walk into the bedroom like the man she married" },
-          ].map(({ num, title, desc }) => (
+            { num: "01", title: "Rock-hard erections", desc: "Maximum firmness and confidence every time", image: "/images/benefit-erections.jpg" },
+            { num: "02", title: "Extended stamina", desc: "Go as long as you want, not just a few minutes", image: "/images/benefit-stamina.jpg" },
+            { num: "03", title: "Superior blood flow", desc: "Optimized circulation where it matters most", image: "/images/benefit-bloodflow.jpg" },
+            { num: "04", title: "Confidence restoration", desc: "Walk into the bedroom like the man she married", image: "/images/benefit-confidence.jpg" },
+          ].map(({ num, title, desc, image }) => (
             <div key={num} className="text-left">
               <p className="font-heading text-[14px] text-foreground/40 mb-2">{num}</p>
-              <div className="w-full h-[2px] bg-cta/30 mb-3" />
+              <img
+                src={image}
+                alt={title}
+                className="w-full aspect-square object-cover rounded-xl mb-3"
+                loading="lazy"
+              />
               <h5 className="font-heading text-[18px] md:text-[20px] text-foreground leading-tight mb-1">
                 {title}
               </h5>
