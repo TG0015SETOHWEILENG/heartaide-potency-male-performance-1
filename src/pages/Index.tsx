@@ -77,7 +77,7 @@ const Index = () => {
       <section className="section-padding bg-background">
         <div className="container-narrow">
           <h2 className="font-heading text-[28px] md:text-[42px] text-foreground text-center mb-10 leading-tight">
-            What Men Are Reporting After Just Days on HeartAide:
+            What Men Are Reporting <span className="md:whitespace-nowrap">After Just Days on HeartAide:</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <img
