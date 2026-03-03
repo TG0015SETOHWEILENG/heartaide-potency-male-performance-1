@@ -222,6 +222,25 @@ const Index = () => {
       {/* Stock Up & Save */}
       <StockUpSection />
 
+      {/* Choose Your Transformation — repeated pricing */}
+      <section className="section-padding bg-secondary">
+        <div className="container-narrow text-center mb-8 md:mb-10">
+          <p className="font-body text-[18px] md:text-[22px] text-foreground mb-4 leading-relaxed max-w-3xl mx-auto">
+            Choose the "6 Bottles" package below for maximum savings and sexual transformation!
+          </p>
+          <h2 className="font-heading text-[32px] md:text-[48px] text-foreground leading-tight">
+            Choose Your Sexual Transformation:
+          </h2>
+        </div>
+        <div className="container-narrow">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
+            {pricingPlans.map((plan) => (
+              <PricingCard key={`transform-${plan.badge}`} {...plan} />
+            ))}
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 };
