@@ -1,37 +1,80 @@
+import { useMemo } from "react";
+
 const ingredients = [
   {
     name: "Red Yeast Rice",
     image: "/images/ingredient-red-yeast-rice.png",
     subtitle: "Clears arterial blockages",
-    position: "top-left" as const,
   },
   {
     name: "CoQ10",
     image: "/images/ingredient-coq10.png",
     subtitle: "Energizes blood vessels",
-    position: "top-right" as const,
   },
   {
     name: "Inositol",
     image: "/images/ingredient-inositol.png",
     subtitle: "Healthy blood pressure",
-    position: "bottom-right" as const,
   },
   {
     name: "Mango Extract",
     image: "/images/ingredient-mango.png",
     subtitle: "Protects blood vessels",
-    position: "bottom-left" as const,
   },
   {
     name: "Pomegranate Extract",
     image: "/images/ingredient-pomegranate.png",
     subtitle: "Powerful antioxidants",
-    position: "bottom-center" as const,
   },
 ];
 
+const SEGMENT_COUNT = 5;
+const GAP_DEG = 3; // gap between segments in degrees
+const SEGMENT_DEG = 360 / SEGMENT_COUNT; // 72°
+
+function getPoint(angleDeg: number, radius = 50) {
+  const rad = (angleDeg * Math.PI) / 180;
+  const x = 50 + radius * Math.sin(rad);
+  const y = 50 - radius * Math.cos(rad);
+  return `${x.toFixed(2)}% ${y.toFixed(2)}%`;
+}
+
+function buildClipPath(index: number) {
+  const startAngle = index * SEGMENT_DEG + GAP_DEG / 2;
+  const endAngle = (index + 1) * SEGMENT_DEG - GAP_DEG / 2;
+  const steps = 12;
+  const points: string[] = ["50% 50%"];
+  for (let i = 0; i <= steps; i++) {
+    const angle = startAngle + ((endAngle - startAngle) * i) / steps;
+    points.push(getPoint(angle));
+  }
+  return `polygon(${points.join(", ")})`;
+}
+
+// Label positions: where to place text relative to the circle
+// Angle at midpoint of each segment, pushed outward
+function getLabelPosition(index: number) {
+  const midAngle = index * SEGMENT_DEG + SEGMENT_DEG / 2;
+  const rad = (midAngle * Math.PI) / 180;
+  // Push label further out from center
+  const distance = 62; // % from center
+  const x = 50 + distance * Math.sin(rad);
+  const y = 50 - distance * Math.cos(rad);
+  return { x, y, midAngle };
+}
+
+function getLabelAlignment(midAngle: number) {
+  // Determine text alignment based on position
+  if (midAngle > 315 || midAngle <= 45) return "center"; // top
+  if (midAngle > 45 && midAngle <= 135) return "left"; // right side
+  if (midAngle > 135 && midAngle <= 225) return "center"; // bottom
+  return "right"; // left side
+}
+
 const IngredientsSection = () => {
+  const clipPaths = useMemo(() => ingredients.map((_, i) => buildClipPath(i)), []);
+  const labelPositions = useMemo(() => ingredients.map((_, i) => getLabelPosition(i)), []);
+
   return (
     <section className="section-padding bg-background overflow-hidden">
       <div className="mx-auto w-full max-w-5xl px-5 md:px-8">
@@ -42,52 +85,26 @@ const IngredientsSection = () => {
           Each ingredient targets a different part of your vascular system for complete blood flow restoration.
         </p>
 
-        {/* Wheel layout — desktop only */}
-        <div className="hidden md:block relative mx-auto mb-14" style={{ width: 620, height: 620 }}>
-          {/* Circular ingredient images arranged in a ring */}
-          {/* Top-left */}
-          <div className="absolute" style={{ top: 20, left: 30 }}>
-            <img src={ingredients[0].image} alt={ingredients[0].name} className="w-[200px] h-[200px] rounded-full object-cover shadow-lg border-4 border-card" />
-            <div className="absolute -left-4 top-1/2 -translate-y-1/2 -translate-x-full text-right w-40">
-              <p className="font-heading text-[20px] text-foreground leading-tight">{ingredients[0].name}</p>
-              <p className="font-body text-[14px] text-muted-foreground mt-1">{ingredients[0].subtitle}</p>
-            </div>
-          </div>
+        {/* Segmented circle — desktop only */}
+        <div className="hidden md:block relative mx-auto" style={{ width: 700, height: 700 }}>
+          {/* Segmented circle */}
+          <div className="absolute inset-0" style={{ width: 500, height: 500, top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>
+            {ingredients.map((ingredient, i) => (
+              <div
+                key={ingredient.name}
+                className="absolute inset-0 overflow-hidden"
+                style={{ clipPath: clipPaths[i] }}
+              >
+                <img
+                  src={ingredient.image}
+                  alt={ingredient.name}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            ))}
 
-          {/* Top-right */}
-          <div className="absolute" style={{ top: 20, right: 30 }}>
-            <img src={ingredients[1].image} alt={ingredients[1].name} className="w-[200px] h-[200px] rounded-full object-cover shadow-lg border-4 border-card" />
-            <div className="absolute -right-4 top-1/2 -translate-y-1/2 translate-x-full text-left w-40">
-              <p className="font-heading text-[20px] text-foreground leading-tight">{ingredients[1].name}</p>
-              <p className="font-body text-[14px] text-muted-foreground mt-1">{ingredients[1].subtitle}</p>
-            </div>
-          </div>
-
-          {/* Bottom-left */}
-          <div className="absolute" style={{ bottom: 80, left: 30 }}>
-            <img src={ingredients[3].image} alt={ingredients[3].name} className="w-[200px] h-[200px] rounded-full object-cover shadow-lg border-4 border-card" />
-            <div className="absolute -left-4 top-1/2 -translate-y-1/2 -translate-x-full text-right w-40">
-              <p className="font-heading text-[20px] text-foreground leading-tight">{ingredients[3].name}</p>
-              <p className="font-body text-[14px] text-muted-foreground mt-1">{ingredients[3].subtitle}</p>
-            </div>
-          </div>
-
-          {/* Bottom-right */}
-          <div className="absolute" style={{ bottom: 80, right: 30 }}>
-            <img src={ingredients[2].image} alt={ingredients[2].name} className="w-[200px] h-[200px] rounded-full object-cover shadow-lg border-4 border-card" />
-            <div className="absolute -right-4 top-1/2 -translate-y-1/2 translate-x-full text-left w-40">
-              <p className="font-heading text-[20px] text-foreground leading-tight">{ingredients[2].name}</p>
-              <p className="font-body text-[14px] text-muted-foreground mt-1">{ingredients[2].subtitle}</p>
-            </div>
-          </div>
-
-          {/* Bottom-center */}
-          <div className="absolute left-1/2 -translate-x-1/2" style={{ bottom: 20 }}>
-            <img src={ingredients[4].image} alt={ingredients[4].name} className="w-[200px] h-[200px] rounded-full object-cover shadow-lg border-4 border-card" />
-            <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 translate-y-full text-center w-48 pt-2">
-              <p className="font-heading text-[20px] text-foreground leading-tight">{ingredients[4].name}</p>
-              <p className="font-body text-[14px] text-muted-foreground mt-1">{ingredients[4].subtitle}</p>
-            </div>
+            {/* Inner circle overlay for the bottle cutout */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[45%] h-[45%] rounded-full bg-background z-10" />
           </div>
 
           {/* Center bottle */}
@@ -95,14 +112,47 @@ const IngredientsSection = () => {
             <img
               src="/images/bottle-1.png"
               alt="HeartAide bottle"
-              className="h-[440px] object-contain drop-shadow-2xl"
+              className="h-[360px] object-contain drop-shadow-2xl"
             />
           </div>
+
+          {/* Labels positioned outside the circle */}
+          {ingredients.map((ingredient, i) => {
+            const { x, y, midAngle } = labelPositions[i];
+            const align = getLabelAlignment(midAngle);
+            return (
+              <div
+                key={`label-${ingredient.name}`}
+                className="absolute"
+                style={{
+                  left: `${x}%`,
+                  top: `${y}%`,
+                  transform: align === "center"
+                    ? "translate(-50%, -50%)"
+                    : align === "left"
+                      ? "translate(0%, -50%)"
+                      : "translate(-100%, -50%)",
+                }}
+              >
+                <p
+                  className="font-heading text-[20px] text-foreground leading-tight"
+                  style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
+                >
+                  {ingredient.name}
+                </p>
+                <p
+                  className="font-body text-[14px] text-muted-foreground mt-1"
+                  style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
+                >
+                  {ingredient.subtitle}
+                </p>
+              </div>
+            );
+          })}
         </div>
 
         {/* Mobile layout — stacked cards */}
         <div className="md:hidden space-y-4 mb-10">
-          {/* Bottle centered on mobile */}
           <div className="flex justify-center mb-6">
             <img
               src="/images/bottle-1.png"
