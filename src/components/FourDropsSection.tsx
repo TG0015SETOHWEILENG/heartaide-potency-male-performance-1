@@ -11,7 +11,8 @@ const FourDropsSection = () => {
       <div className="mx-auto w-full max-w-5xl relative z-10">
         {/* Headline — full width */}
         <h2 className="font-heading text-[36px] md:text-[54px] text-foreground leading-[1.08] text-center mb-12 md:mb-16">
-          Why 4 Drops Work <span className="whitespace-nowrap">Faster Than Any Pill</span>
+          Why 4 Drops Work<br className="hidden md:block" />
+          <span className="whitespace-nowrap">Faster Than Any Pill</span>
         </h2>
 
         {/* Split layout */}
