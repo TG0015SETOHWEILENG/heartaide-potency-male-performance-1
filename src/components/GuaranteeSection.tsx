@@ -3,7 +3,7 @@ const GuaranteeSection = () => {
     <section
       className="section-padding bg-cover bg-center bg-no-repeat relative"
       style={{
-        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.85) 0%, rgba(255,255,255,0.7) 45%, rgba(255,255,255,0.15) 100%), url('/images/guarantee-bg.jpg')`,
+        backgroundImage: `linear-gradient(to right, rgba(10, 15, 30, 0.82) 0%, rgba(10, 15, 30, 0.6) 50%, rgba(10, 15, 30, 0.15) 100%), url('/images/guarantee-bg.jpg')`,
       }}
     >
       <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
@@ -18,28 +18,28 @@ const GuaranteeSection = () => {
           </div>
 
           {/* Headline */}
-          <h2 className="font-heading text-[32px] md:text-[48px] text-foreground leading-tight mb-4">
+          <h2 className="font-heading text-[32px] md:text-[48px] text-white leading-tight mb-4">
             Your Sexual Power GUARANTEED or Money Back
           </h2>
 
           {/* Subheadline */}
-          <p className="font-body text-[18px] md:text-[22px] text-foreground font-bold mb-6">
+          <p className="font-body text-[18px] md:text-[22px] text-white font-bold mb-6">
             Try HeartAide for a FULL YEAR completely risk-free.
           </p>
 
           {/* Body copy */}
-          <p className="font-body text-[18px] md:text-[20px] text-foreground leading-relaxed mb-5">
+          <p className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed mb-5">
             If you don't experience rock-hard erections, extended stamina, and renewed confidence
             within 365 days, simply return your bottles, <strong>even if empty</strong>, for a complete refund.
           </p>
 
-          <p className="font-body text-[18px] md:text-[20px] text-foreground leading-relaxed mb-6">
+          <p className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed mb-6">
             Every man's body is different. We give you a full year to experience HeartAide's
             complete transformation.
           </p>
 
           {/* How It Works */}
-          <h3 className="font-heading text-[22px] md:text-[26px] text-foreground font-bold mb-4">
+          <h3 className="font-heading text-[22px] md:text-[26px] text-white font-bold mb-4">
             How It Works:
           </h3>
 
@@ -51,18 +51,18 @@ const GuaranteeSection = () => {
               "Return bottles (we cover shipping)",
               "Get every penny back in 5-7 days",
             ].map((step) => (
-              <li key={step} className="font-body text-[18px] md:text-[20px] text-foreground leading-relaxed">
+              <li key={step} className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed">
                 {step}
               </li>
             ))}
           </ol>
 
           {/* Bold statement */}
-          <p className="font-body text-[18px] md:text-[20px] text-foreground font-bold mb-5">
+          <p className="font-body text-[18px] md:text-[20px] text-white font-bold mb-5">
             No fine print. No hassles. No questions asked.
           </p>
 
-          <p className="font-body text-[18px] md:text-[20px] text-foreground leading-relaxed mb-8">
+          <p className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed mb-8">
             The only thing you risk losing is weak erections and sexual disappointment.
           </p>
 
