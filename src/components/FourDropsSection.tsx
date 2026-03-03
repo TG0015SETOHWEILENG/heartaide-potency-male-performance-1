@@ -15,43 +15,9 @@ const FourDropsSection = () => {
           <span className="whitespace-nowrap">Faster Than Any Pill</span>
         </h2>
 
-        {/* Split layout */}
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-10 md:gap-14 items-start mb-14">
-          {/* Left — sticky visual */}
-          <div className="hidden md:flex flex-col items-center md:sticky md:top-24">
-            <img
-              src="/images/bottle-1.png"
-              alt="HeartAide sublingual dropper bottle"
-              className="w-72 lg:w-80 xl:w-[340px] object-contain drop-shadow-2xl"
-              loading="lazy"
-            />
-            {/* Stat pills below the bottle */}
-            <div className="mt-6 grid grid-cols-2 gap-3 w-full max-w-[320px]">
-              {[
-                { icon: Droplets, stat: "4 Drops", label: "Once a day" },
-                { icon: Zap, stat: "Minutes", label: "Not hours" },
-                { icon: ShieldAlert, stat: "Zero", label: "Stomach upset" },
-                { icon: CheckCircle2, stat: "100%", label: "Full delivery" },
-              ].map(({ icon: Icon, stat, label }) => (
-                <div key={label} className="rounded-xl bg-white border border-border p-4 text-center shadow-lg">
-                  <Icon className="w-6 h-6 text-cta mx-auto mb-1.5" strokeWidth={2} />
-                  <p className="font-heading text-[22px] text-foreground leading-none mb-1 font-bold">{stat}</p>
-                  <p className="font-body text-[13px] text-foreground/70">{label}</p>
-                </div>
-              ))}
-            </div>
-            {/* Trust badge */}
-            <div className="mt-5 w-full max-w-[320px] rounded-xl bg-cta/15 border border-cta/30 p-4 text-center shadow-lg">
-              <p className="font-heading text-[16px] text-foreground leading-snug font-bold">
-                🔬 Doctor-Recommended Formula
-              </p>
-              <p className="font-body text-[13px] text-foreground/70 mt-1">
-                Clinically studied ingredients
-              </p>
-            </div>
-          </div>
-
-          {/* Right — flowing copy */}
+        {/* Split layout — copy first, bottle second */}
+        <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-10 md:gap-14 items-start mb-14">
+          {/* Left — flowing copy */}
           <div className="space-y-7">
             <p className="font-body text-[20px] md:text-[22px] text-foreground leading-relaxed">
               Here's something the supplement industry doesn't want you to know: when you swallow a pill, your stomach acid destroys up to{" "}
@@ -89,9 +55,43 @@ const FourDropsSection = () => {
               No horse pills. No timing it 60 minutes before you need it like Vxxxxx. No stomach upset. Just precise, efficient delivery of the exact formula doctors are recommending.
             </p>
           </div>
+
+          {/* Right — sticky visual */}
+          <div className="hidden md:flex flex-col items-center md:sticky md:top-24">
+            <img
+              src="/images/bottle-1.png"
+              alt="HeartAide sublingual dropper bottle"
+              className="w-72 lg:w-80 xl:w-[340px] object-contain drop-shadow-2xl"
+              loading="lazy"
+            />
+            {/* Stat pills below the bottle */}
+            <div className="mt-6 grid grid-cols-2 gap-3 w-full max-w-[320px]">
+              {[
+                { icon: Droplets, stat: "4 Drops", label: "Once a day" },
+                { icon: Zap, stat: "Minutes", label: "Not hours" },
+                { icon: ShieldAlert, stat: "Zero", label: "Stomach upset" },
+                { icon: CheckCircle2, stat: "100%", label: "Full delivery" },
+              ].map(({ icon: Icon, stat, label }) => (
+                <div key={label} className="rounded-xl bg-white border border-border p-4 text-center shadow-lg">
+                  <Icon className="w-6 h-6 text-cta mx-auto mb-1.5" strokeWidth={2} />
+                  <p className="font-heading text-[22px] text-foreground leading-none mb-1 font-bold">{stat}</p>
+                  <p className="font-body text-[13px] text-foreground/70">{label}</p>
+                </div>
+              ))}
+            </div>
+            {/* Trust badge */}
+            <div className="mt-5 w-full max-w-[320px] rounded-xl bg-cta/15 border border-cta/30 p-4 text-center shadow-lg">
+              <p className="font-heading text-[16px] text-foreground leading-snug font-bold">
+                🔬 Doctor-Recommended Formula
+              </p>
+              <p className="font-body text-[13px] text-foreground/70 mt-1">
+                Clinically studied ingredients
+              </p>
+            </div>
+          </div>
         </div>
 
-        {/* Mobile-only stat badges (hidden on desktop since they're in the sticky column) */}
+        {/* Mobile-only stat badges */}
         <div className="grid grid-cols-2 gap-3 mb-10 md:hidden">
           {[
             { icon: Droplets, stat: "4 Drops", label: "Once a day" },
