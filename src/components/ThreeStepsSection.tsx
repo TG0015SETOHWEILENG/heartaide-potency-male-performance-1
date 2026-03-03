@@ -56,8 +56,8 @@ const ThreeStepsSection = () => {
         </div>
 
         {/* Subheadline */}
-        <p className="font-heading text-[22px] md:text-[28px] text-foreground font-bold text-center mt-12 md:mt-16 leading-snug max-w-3xl mx-auto">
-          No complicated routines. No dangerous chemicals. Just natural, powerful results.
+        <p className="font-heading text-[22px] md:text-[28px] text-foreground font-bold text-center mt-12 md:mt-16 leading-snug mx-auto">
+          <span className="md:whitespace-nowrap">No complicated routines. No dangerous chemicals. Just natural, powerful results.</span>
         </p>
       </div>
     </section>
