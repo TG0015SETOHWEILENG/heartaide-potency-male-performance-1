@@ -1,6 +1,7 @@
 import PricingCard from "@/components/PricingCard";
 import WhySection from "@/components/WhySection";
 import FourDropsSection from "@/components/FourDropsSection";
+import IngredientsSection from "@/components/IngredientsSection";
 import { Shield, Zap, Clock, Heart, Leaf, Star, BadgeCheck, Award, MapPin, ShieldCheck } from "lucide-react";
 
 const pricingPlans = [
@@ -203,6 +204,9 @@ const Index = () => {
 
       {/* Why 4 Drops Work Faster */}
       <FourDropsSection />
+
+      {/* Ingredients */}
+      <IngredientsSection />
 
     </div>
   );
