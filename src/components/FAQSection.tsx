@@ -46,7 +46,7 @@ const faqs = [
 
 const FAQSection = () => {
   return (
-    <section className="section-padding bg-secondary">
+    <section className="section-padding bg-background">
       <div className="mx-auto w-full max-w-5xl px-5 md:px-8">
         <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-8 md:gap-14 items-start">
           {/* Left heading */}
