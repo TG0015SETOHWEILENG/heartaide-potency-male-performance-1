@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import dropperSerum from "@/assets/dropper-serum.png";
 
 const ingredients = [
   {
@@ -115,7 +116,7 @@ const IngredientsSection = () => {
           {/* Center bottle */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             <img
-              src="/images/dropper-serum.png"
+              src={dropperSerum}
               alt="HeartAide dropper serum"
               className="h-[300px] object-contain drop-shadow-2xl"
             />
@@ -128,7 +129,7 @@ const IngredientsSection = () => {
             return (
               <div
                 key={`label-${ingredient.name}`}
-                className="absolute"
+                className="absolute w-[160px]"
                 style={{
                   left: `${x}%`,
                   top: `${y}%`,
@@ -146,7 +147,7 @@ const IngredientsSection = () => {
                   {ingredient.name}
                 </p>
                 <p
-                  className="font-body text-[16px] md:text-[17px] text-muted-foreground mt-1.5"
+                  className="font-body text-[15px] md:text-[16px] text-muted-foreground mt-1.5"
                   style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
                 >
                   {ingredient.subtitle}
@@ -154,7 +155,7 @@ const IngredientsSection = () => {
                 {ingredient.details.map((detail) => (
                   <p
                     key={detail}
-                    className="font-body text-[15px] md:text-[16px] text-muted-foreground"
+                    className="font-body text-[14px] md:text-[15px] text-muted-foreground"
                     style={{ textAlign: align === "left" ? "left" : align === "right" ? "right" : "center" }}
                   >
                     {detail}
