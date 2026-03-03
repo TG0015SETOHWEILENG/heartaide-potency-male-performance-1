@@ -103,7 +103,7 @@ const Index = () => {
                       <Icon className="w-6 h-6 text-cta" strokeWidth={2} />
                     </div>
                     {index < arr.length - 1 && (
-                      <div className="w-[2px] h-10 bg-cta/30 mt-1" />
+                      <div className="w-[2px] h-16 bg-cta/30 mt-1" />
                     )}
                   </div>
                   <div className="pt-1">
