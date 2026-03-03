@@ -115,7 +115,7 @@ const IngredientsSection = () => {
           {/* Center bottle */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
             <img
-              src="/images/pill-bottle.png"
+              src="/images/bottle-1.png"
               alt="HeartAide bottle"
               className="h-[300px] object-contain drop-shadow-2xl"
             />
