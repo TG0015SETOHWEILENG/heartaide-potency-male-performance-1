@@ -246,8 +246,8 @@ const Index = () => {
         <div className="flex animate-marquee whitespace-nowrap">
           {[...Array(20)].map((_, i) => (
             <span key={i} className="flex items-center gap-3 mx-5">
-              <img src="/images/guarantee-icon.svg" alt="" className="w-5 h-5 invert brightness-200" />
-              <span className="font-heading text-[16px] md:text-[18px] text-cta-foreground font-semibold tracking-wide">
+              <img src="/images/guarantee-icon.svg" alt="" className="w-5 h-5 brightness-0 invert" />
+              <span className="font-heading text-[16px] md:text-[18px] text-cta-foreground tracking-wide">
                 Money-Back Guarantee
               </span>
             </span>
