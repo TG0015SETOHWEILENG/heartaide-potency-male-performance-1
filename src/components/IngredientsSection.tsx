@@ -87,7 +87,7 @@ const IngredientsSection = () => {
         <h2 className="font-heading text-[36px] md:text-[54px] text-foreground leading-[1.08] text-center mb-6">
           5 Proven Ingredients That <span className="whitespace-nowrap">Restore Sexual Power</span>
         </h2>
-        <p className="font-body text-[20px] md:text-[22px] text-muted-foreground text-center max-w-2xl mx-auto mb-12 md:mb-16 leading-relaxed">
+        <p className="font-body text-[20px] md:text-[22px] text-foreground text-center max-w-2xl mx-auto mb-12 md:mb-16 leading-relaxed">
           Each ingredient targets a different part of your vascular system for complete blood flow restoration.
         </p>
 
