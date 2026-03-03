@@ -82,7 +82,7 @@ const IngredientsSection = () => {
           </div>
 
           {/* Bottom-center */}
-          <div className="absolute left-1/2 -translate-x-1/2" style={{ bottom: -20 }}>
+          <div className="absolute left-1/2 -translate-x-1/2" style={{ bottom: 20 }}>
             <img src={ingredients[4].image} alt={ingredients[4].name} className="w-[200px] h-[200px] rounded-full object-cover shadow-lg border-4 border-card" />
             <div className="absolute -bottom-2 left-1/2 -translate-x-1/2 translate-y-full text-center w-48 pt-2">
               <p className="font-heading text-[20px] text-foreground leading-tight">{ingredients[4].name}</p>
