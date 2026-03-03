@@ -2,12 +2,10 @@ const StockUpSection = () => {
   return (
     <section className="section-padding bg-background border-t border-border">
       <div className="container-narrow">
-        <h2 className="font-heading text-[32px] md:text-[48px] text-foreground leading-tight text-center mb-2">
+        <h2 className="font-heading text-[32px] md:text-[48px] text-foreground leading-tight text-center mb-8">
           STOCK UP & SAVE
+          <span className="block">With Our Multi-Bottle Discounts</span>
         </h2>
-        <h3 className="font-heading text-[28px] md:text-[42px] text-foreground leading-tight text-center mb-8">
-          With Our Multi-Bottle Discounts
-        </h3>
 
         <p className="font-body text-[18px] md:text-[22px] text-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
           Our warehouse is currently stocked with HeartAide, so take advantage
