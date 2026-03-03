@@ -4,6 +4,7 @@ import FourDropsSection from "@/components/FourDropsSection";
 import IngredientsSection from "@/components/IngredientsSection";
 import ThreeStepsSection from "@/components/ThreeStepsSection";
 import StockUpSection from "@/components/StockUpSection";
+import GuaranteeSection from "@/components/GuaranteeSection";
 import { Shield, Zap, Clock, Heart, Leaf, Star, BadgeCheck, Award, MapPin, ShieldCheck } from "lucide-react";
 
 const pricingPlans = [
@@ -254,6 +255,9 @@ const Index = () => {
           ))}
         </div>
       </div>
+
+      {/* Guarantee Section */}
+      <GuaranteeSection />
 
     </div>
   );
