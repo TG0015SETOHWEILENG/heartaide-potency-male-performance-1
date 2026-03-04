@@ -31,8 +31,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
       }}
     >
       {/* FREE SHIPPING ribbon — mobile only */}
-      <div className="md:hidden absolute top-[38px] -left-[30px] z-20 w-[120px] rotate-[-45deg]">
-        <div className="bg-red-600 text-white font-body font-extrabold text-[10px] uppercase tracking-wider text-center py-1 shadow-lg">
+      <div className="md:hidden absolute top-[28px] -left-[32px] z-20 w-[130px] rotate-[-45deg]">
+        <div className="bg-red-600 text-white font-body font-extrabold text-[9px] uppercase tracking-widest text-center py-[3px] shadow-lg border-y border-red-400/30">
           Free Shipping
         </div>
       </div>
