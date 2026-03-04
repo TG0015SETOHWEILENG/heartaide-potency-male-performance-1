@@ -54,6 +54,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
             src={`/images/bottle-${bottleCount}.png`}
             alt={`${bottleCount} bottle${Number(bottleCount) > 1 ? "s" : ""} of HeartAide`}
             className="w-44 h-auto object-contain drop-shadow-xl"
+            width={308}
+            height={308}
+            fetchPriority={bottleCount === "1" ? "high" : "auto"}
           />
           <div
             className="absolute -right-3 -bottom-2 bg-cta rounded-full w-[72px] h-[72px] flex flex-col items-center justify-center rotate-12 shadow-lg border-[3px] border-white/20"
