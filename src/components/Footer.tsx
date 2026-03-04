@@ -42,11 +42,10 @@ const Footer = () => {
             purposes only and is not medical advice. Always consult your physician before
             beginning any diet or exercise program.
           </p>
-          <p className="font-body text-[13px] text-white/60 leading-relaxed mb-3">
-            ** Target and Walmart are in no way associated with VivaSlim™.
-          </p>
           <p className="font-body text-[13px] text-white/60 leading-relaxed mb-8">
-            *** Lizzy Anderson is a real customer at Simple Promise™; however her name has been changed for privacy.
+            † Testimonials within our advertisement are real life reactions of real customer at
+            Simple Promise™; however their name has been changed for privacy. Individual
+            results may vary.
           </p>
 
           {/* Links */}
