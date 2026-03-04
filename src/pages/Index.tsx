@@ -186,7 +186,7 @@ const Index = () => {
           </div>
 
           {/* Trust Badges Row */}
-          <div className="mt-12 flex flex-wrap justify-center items-start gap-8 md:gap-14">
+          <div className="mt-12 flex flex-nowrap justify-center items-start gap-4 md:gap-14">
             {[
               { icon: ShieldCheck, label: "FDA-Registered Facility" },
               { icon: Award, label: "GMP Certified" },
