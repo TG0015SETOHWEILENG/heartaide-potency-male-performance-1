@@ -49,9 +49,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
             height={308}
             fetchPriority={bottleCount === "1" ? "high" : "auto"}
           />
-          <div className="absolute -right-1 -bottom-1 bg-cta rounded-full w-[40px] h-[40px] flex flex-col items-center justify-center rotate-12 shadow-lg border-2 border-white/20">
-            <span className="font-body font-extrabold text-[7px] text-cta-foreground uppercase leading-none">Save</span>
-            <span className="font-body font-extrabold text-[11px] text-cta-foreground leading-none">{savings}</span>
+          <div className="absolute -right-1 -bottom-1 bg-cta rounded-full w-[48px] h-[48px] flex flex-col items-center justify-center rotate-12 shadow-lg border-2 border-white/20">
+            <span className="font-body font-extrabold text-[8px] text-cta-foreground uppercase leading-none">Save</span>
+            <span className="font-body font-extrabold text-[14px] text-cta-foreground leading-none">{savings}</span>
           </div>
         </div>
 
@@ -60,13 +60,13 @@ const PricingCard: React.FC<PricingCardProps> = ({
           <p className="font-body font-bold text-[14px] text-primary-foreground uppercase tracking-wide leading-tight">
             {supply}
           </p>
-          <p className="font-body text-[13px] text-primary-foreground/75 leading-snug">
+          <p className="font-body font-medium text-[13px] text-primary-foreground/75 leading-snug">
             {tagline}
           </p>
-          <p className="font-body font-extrabold text-[36px] text-primary-foreground leading-none mt-1">
-            {pricePerBottle}<span className="text-[16px] font-bold">/bottle</span>
+          <p className="font-body font-extrabold text-[42px] text-primary-foreground leading-none mt-1">
+            {pricePerBottle}<span className="text-[18px] font-bold">/bottle</span>
           </p>
-          <p className="font-body text-[10px] text-primary-foreground/70 leading-tight">
+          <p className="font-body font-medium text-[10px] text-primary-foreground/70 leading-tight">
             365-Day Guarantee · FREE Shipping
           </p>
         </div>
@@ -83,7 +83,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
         <p className="font-body font-bold text-[20px] text-primary-foreground uppercase tracking-wide">
           {supply}
         </p>
-        <p className="font-body text-[16px] text-primary-foreground/80 leading-snug max-w-[220px]">
+        <p className="font-body font-medium text-[16px] text-primary-foreground/80 leading-snug max-w-[220px]">
           {tagline}
         </p>
         <div className="relative mb-2">
@@ -94,19 +94,19 @@ const PricingCard: React.FC<PricingCardProps> = ({
             width={308}
             height={308}
           />
-          <div className="absolute -right-3 -bottom-2 bg-cta rounded-full w-[72px] h-[72px] flex flex-col items-center justify-center rotate-12 shadow-lg border-[3px] border-white/20">
-            <span className="font-body font-extrabold text-[12px] text-cta-foreground uppercase leading-none">Save</span>
-            <span className="font-body font-extrabold text-[18px] text-cta-foreground leading-none">{savings}</span>
+          <div className="absolute -right-3 -bottom-2 bg-cta rounded-full w-[80px] h-[80px] flex flex-col items-center justify-center rotate-12 shadow-lg border-[3px] border-white/20">
+            <span className="font-body font-extrabold text-[13px] text-cta-foreground uppercase leading-none">Save</span>
+            <span className="font-body font-extrabold text-[22px] text-cta-foreground leading-none">{savings}</span>
           </div>
         </div>
-        <p className="font-body font-extrabold text-[50px] text-primary-foreground leading-none">
-          {pricePerBottle}<span className="text-[24px] font-bold">/bottle</span>
+        <p className="font-body font-extrabold text-[56px] text-primary-foreground leading-none">
+          {pricePerBottle}<span className="text-[26px] font-bold">/bottle</span>
         </p>
         <div className="space-y-0.5">
           <p className="font-body font-bold text-[14px] text-primary-foreground/90 uppercase tracking-wide">
             Fast &amp; FREE Shipping
           </p>
-          <p className="font-body text-[13px] text-primary-foreground/70">
+          <p className="font-body font-medium text-[13px] text-primary-foreground/70">
             365-Day Money-Back Guarantee
           </p>
         </div>
