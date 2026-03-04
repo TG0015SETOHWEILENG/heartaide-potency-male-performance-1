@@ -45,7 +45,7 @@ const WhySection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-5">
           {/* Pills Side — visually "bad" on mobile */}
           <div className="rounded-t-2xl md:rounded-2xl border border-red-500/40 bg-gradient-to-b from-red-950/70 to-black/50 backdrop-blur-md p-6 md:p-8 flex flex-col relative overflow-hidden">
-            <div className="absolute top-0 right-0 bg-red-600 text-white font-body text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-bl-xl md:hidden">
+            <div className="absolute top-0 right-0 bg-red-600 text-white font-body text-[11px] md:text-[12px] font-bold uppercase tracking-wider px-4 md:px-5 py-1 md:py-1.5 rounded-bl-xl">
               Avoid
             </div>
             <div className="flex items-center gap-4 mb-2 mt-4 md:mt-0">
