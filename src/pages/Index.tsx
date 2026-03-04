@@ -188,7 +188,6 @@ const Index = () => {
             {[
               { icon: ShieldCheck, label: "FDA-Registered Facility" },
               { icon: Award, label: "GMP Certified" },
-              { icon: MapPin, label: "Made in USA" },
               { icon: Star, label: "365-Day Guarantee" },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex flex-col items-center gap-2">
