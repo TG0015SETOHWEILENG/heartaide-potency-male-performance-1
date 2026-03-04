@@ -2,7 +2,7 @@ import { Package, Truck, Lock } from "lucide-react";
 
 const StockUpSection = () => {
   return (
-    <section className="section-padding border-t border-border bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/stockup-bg.png)' }}>
+    <section className="section-padding border-t border-border bg-cover bg-right md:bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/stockup-bg.png)' }}>
       <div className="container-narrow">
         <h2 className="font-heading text-[32px] md:text-[48px] text-foreground leading-tight text-center mb-8">
           STOCK UP & SAVE
