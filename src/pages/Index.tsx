@@ -45,7 +45,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* Hero + Pricing — single above-the-fold section */}
       <section className="px-4 pt-6 pb-8 md:px-8 md:pt-10 md:pb-14 bg-secondary relative bg-cover bg-right bg-no-repeat" style={{ backgroundImage: `linear-gradient(to right, rgba(10, 15, 30, 0.8) 0%, rgba(10, 15, 30, 0.5) 50%, rgba(10, 15, 30, 0.25) 100%), url('/images/hero-bg.webp')` }}>
-        <div className="container-narrow text-center mb-5 md:mb-8 animate-fade-in" style={{ animationDuration: '0.6s', animationFillMode: 'both' }}>
+        <div className="container-narrow text-center mb-5 md:mb-8 hero-animate">
           <h1 className="font-heading text-[32px] md:text-display text-white mb-3 leading-[1.15]">
             The Recommended Blood Flow Formula Men Over 40 Are Choosing Over{" "}
             <span className="text-red-500 font-bold">Vxxxxx</span>
@@ -58,7 +58,7 @@ const Index = () => {
           </p>
         </div>
 
-        <div className="container-narrow animate-fade-in" style={{ animationDuration: '0.6s', animationDelay: '0.3s', animationFillMode: 'both' }}>
+        <div className="container-narrow hero-animate hero-animate-delay-1">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 items-start">
             {pricingPlans.map((plan) => (
               <PricingCard key={plan.badge} {...plan} />
@@ -66,7 +66,7 @@ const Index = () => {
           </div>
         </div>
 
-        <div className="text-center mt-8 mx-auto px-4 animate-fade-in" style={{ maxWidth: '1300px', animationDuration: '0.6s', animationDelay: '0.5s', animationFillMode: 'both' }}>
+        <div className="text-center mt-8 mx-auto px-4 hero-animate hero-animate-delay-2" style={{ maxWidth: '1300px' }}>
           <p className="font-body text-[18px] md:text-body-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
             Experience the natural breakthrough that's giving men their sexual
             power back. HeartAide works by optimizing blood flow to restore the
