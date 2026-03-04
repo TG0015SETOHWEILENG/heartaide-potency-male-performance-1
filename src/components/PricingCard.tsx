@@ -71,7 +71,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
             {tagline}
           </p>
           <p className="font-body font-extrabold text-[42px] text-primary-foreground leading-none mt-1">
-            {pricePerBottle}<span className="text-[18px] font-bold">/bottle</span>
+            {pricePerBottle}<span className="text-[14px] font-bold">/bottle</span>
           </p>
           <p className="font-body font-medium text-[10px] text-primary-foreground/70 leading-tight whitespace-nowrap">
             365 Money Back Guarantee
@@ -107,7 +107,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
           </div>
         </div>
         <p className="font-body font-extrabold text-[50px] text-primary-foreground leading-none">
-          {pricePerBottle}<span className="text-[24px] font-bold">/bottle</span>
+          {pricePerBottle}<span className="text-[18px] font-bold">/bottle</span>
         </p>
         <div className="space-y-0.5">
           <p className="font-body font-bold text-[14px] text-primary-foreground/90 uppercase tracking-wide">
