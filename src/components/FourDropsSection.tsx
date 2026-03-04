@@ -12,7 +12,7 @@ const FourDropsSection = () => {
       <div className="mx-auto w-full max-w-5xl relative z-10">
         <ScrollReveal animation="fade-down">
           <h2 className="font-heading text-[36px] md:text-[54px] text-foreground leading-[1.08] text-center mb-12 md:mb-16">
-            Why 4 Drops Work<br className="hidden md:block" /> Faster Than Any Pill
+            <span className="md:hidden">Why 4 Drops<br />Work Faster Than<br />Any Pill</span><span className="hidden md:inline">Why 4 Drops Work<br /> Faster Than Any Pill</span>
           </h2>
         </ScrollReveal>
 
