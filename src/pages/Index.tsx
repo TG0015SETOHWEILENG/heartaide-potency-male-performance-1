@@ -75,7 +75,7 @@ const Index = () => {
       </section>
 
       {/* Benefits Section */}
-      <section className="section-padding bg-cover bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/stockup-bg.png)' }}>
+      <section className="section-padding bg-cover bg-right md:bg-center bg-no-repeat" style={{ backgroundImage: 'url(/images/stockup-bg.png)' }}>
         <div className="container-narrow">
           <h2 className="font-heading text-[28px] md:text-[42px] text-foreground text-center mb-10 leading-tight">
             What Men Are Reporting <span className="md:whitespace-nowrap">After Just Days on HeartAide:</span>
