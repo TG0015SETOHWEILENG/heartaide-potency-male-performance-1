@@ -66,9 +66,9 @@ const GuaranteeSection = () => {
             <p className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed mb-8">
               The only thing you risk losing is weak erections and sexual disappointment.
             </p>
-            <button className="bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[18px] md:text-[20px] py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto">
+            <a href="#transformation" className="inline-block bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[18px] md:text-[20px] py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto text-center">
               Claim My Risk-Free HeartAide Now
-            </button>
+            </a>
           </div>
         </ScrollReveal>
       </div>

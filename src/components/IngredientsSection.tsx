@@ -120,9 +120,9 @@ const IngredientsSection = () => {
 
         <ScrollReveal animation="fade-up">
           <div className="text-center mt-14 md:mt-20">
-            <button className="bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-body py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto">
+            <a href="#transformation" className="inline-block bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-body py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto text-center">
               Fix My Blood Flow
-            </button>
+            </a>
           </div>
         </ScrollReveal>
       </div>
