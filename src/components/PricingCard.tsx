@@ -69,10 +69,13 @@ const PricingCard: React.FC<PricingCardProps> = ({
           <p className="font-body text-[10px] text-primary-foreground/70 leading-tight">
             365-Day Guarantee · FREE Shipping
           </p>
-          <button className="mt-1.5 w-full bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[14px] py-2 px-4 rounded-lg transition-all uppercase tracking-wide shadow-lg">
-            Fix My Performance
-          </button>
         </div>
+      </div>
+      {/* MOBILE: full-width CTA below the row */}
+      <div className="md:hidden px-3 pb-3 -mt-1 w-full">
+        <button className="w-full bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[15px] py-2.5 px-4 rounded-lg transition-all uppercase tracking-wide shadow-lg">
+          Fix My Performance
+        </button>
       </div>
 
       {/* DESKTOP: original vertical layout */}
