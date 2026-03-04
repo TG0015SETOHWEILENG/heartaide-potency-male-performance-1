@@ -60,7 +60,7 @@ const ThreeStepsSection = () => {
         {/* Subheadline */}
         <div className="flex flex-wrap justify-center gap-3 mt-12 md:mt-16">
           {["No complicated routines", "No dangerous chemicals", "Just natural, powerful results"].map((text) => (
-            <div key={text} className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-3 shadow-lg">
+            <div key={text} className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-5 py-3 shadow-lg whitespace-nowrap">
               <span className="w-5 h-5 rounded-full bg-cta flex items-center justify-center flex-shrink-0">
                 <svg className="w-3 h-3 text-[#001C38]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
               </span>
