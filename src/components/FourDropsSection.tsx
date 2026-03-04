@@ -97,9 +97,9 @@ const FourDropsSection = () => {
 
         <ScrollReveal animation="fade-up">
           <div className="text-center">
-            <button className="bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-body py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto">
+            <a href="#transformation" className="inline-block bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-body py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto text-center">
               Try HeartAide Risk-Free
-            </button>
+            </a>
           </div>
         </ScrollReveal>
       </div>
