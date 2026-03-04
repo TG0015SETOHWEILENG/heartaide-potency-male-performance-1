@@ -1,4 +1,5 @@
 import { ShieldCheck, Calendar, HeadphonesIcon, Package, Banknote } from "lucide-react";
+import { ScrollReveal } from "@/hooks/use-scroll-animation";
 
 const guaranteeSteps = [
   { icon: ShieldCheck, label: "Order today with confidence" },
@@ -12,75 +13,64 @@ const GuaranteeSection = () => {
   return (
     <section
       className="section-padding bg-cover bg-center bg-no-repeat relative"
-      style={{
-        backgroundImage: `linear-gradient(to right, rgba(10, 15, 30, 0.82) 0%, rgba(10, 15, 30, 0.6) 50%, rgba(10, 15, 30, 0.15) 100%), url('/images/guarantee-bg.jpg')`,
-      }}
+      style={{ backgroundImage: `linear-gradient(to right, rgba(10, 15, 30, 0.82) 0%, rgba(10, 15, 30, 0.6) 50%, rgba(10, 15, 30, 0.15) 100%), url('/images/guarantee-bg.jpg')` }}
     >
       <div className="mx-auto w-full max-w-6xl px-5 md:px-8">
         <div className="max-w-3xl">
-          {/* Seal */}
-          <div className="mb-6">
-            <img
-              src="/images/mbg-seal.svg"
-              alt="365-Day Money-Back Guarantee Seal"
-              className="w-16 h-16 md:w-20 md:h-20"
-            />
-          </div>
+          <ScrollReveal animation="scale-in">
+            <div className="mb-6">
+              <img src="/images/mbg-seal.svg" alt="365-Day Money-Back Guarantee Seal" className="w-16 h-16 md:w-20 md:h-20" />
+            </div>
+          </ScrollReveal>
 
-          {/* Headline */}
-          <h2 className="font-heading text-[32px] md:text-[48px] text-white leading-tight mb-4">
-            Your Sexual Power GUARANTEED or Money Back
-          </h2>
+          <ScrollReveal animation="fade-down">
+            <h2 className="font-heading text-[32px] md:text-[48px] text-white leading-tight mb-4">
+              Your Sexual Power GUARANTEED or Money Back
+            </h2>
+          </ScrollReveal>
 
-          {/* Subheadline */}
-          <p className="font-body text-[18px] md:text-[22px] text-white font-bold mb-6">
-            Try HeartAide for a FULL YEAR completely risk-free.
-          </p>
-
-          {/* Body copy */}
-          <p className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed mb-5">
-            If you don't experience rock-hard erections, extended stamina, and renewed confidence
-            within 365 days, simply return your bottles, <strong>even if empty</strong>, for a complete refund.
-          </p>
-
-          <p className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed mb-6">
-            Every man's body is different. We give you a full year to experience HeartAide's
-            complete transformation.
-          </p>
-
-          {/* How It Works */}
-          <h3 className="font-heading text-[22px] md:text-[26px] text-white font-bold mb-4">
-            How It Works:
-          </h3>
+          <ScrollReveal animation="fade-up">
+            <p className="font-body text-[18px] md:text-[22px] text-white font-bold mb-6">
+              Try HeartAide for a FULL YEAR completely risk-free.
+            </p>
+            <p className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed mb-5">
+              If you don't experience rock-hard erections, extended stamina, and renewed confidence
+              within 365 days, simply return your bottles, <strong>even if empty</strong>, for a complete refund.
+            </p>
+            <p className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed mb-6">
+              Every man's body is different. We give you a full year to experience HeartAide's
+              complete transformation.
+            </p>
+            <h3 className="font-heading text-[22px] md:text-[26px] text-white font-bold mb-4">How It Works:</h3>
+          </ScrollReveal>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 mb-6">
           {guaranteeSteps.map(({ icon: Icon, label }, index) => (
-            <div key={index} className="flex flex-col items-center text-center gap-2">
-              <div className="w-12 h-12 rounded-full bg-cta/20 flex items-center justify-center">
-                <Icon className="w-6 h-6 text-cta" strokeWidth={1.5} />
+            <ScrollReveal key={index} animation="fade-up" delay={index * 100}>
+              <div className="flex flex-col items-center text-center gap-2">
+                <div className="w-12 h-12 rounded-full bg-cta/20 flex items-center justify-center">
+                  <Icon className="w-6 h-6 text-cta" strokeWidth={1.5} />
+                </div>
+                <span className="font-body text-[14px] md:text-[16px] text-white/90 leading-tight">{label}</span>
               </div>
-              <span className="font-body text-[14px] md:text-[16px] text-white/90 leading-tight">{label}</span>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
 
-        <div className="max-w-3xl">
-
-          {/* Bold statement */}
-          <p className="font-body text-[18px] md:text-[20px] text-white font-bold mb-5">
-            No fine print. No hassles. No questions asked.
-          </p>
-
-          <p className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed mb-8">
-            The only thing you risk losing is weak erections and sexual disappointment.
-          </p>
-
-          {/* CTA */}
-          <button className="bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[18px] md:text-[20px] py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto">
-            Claim My Risk-Free HeartAide Now
-          </button>
-        </div>
+        <ScrollReveal animation="fade-up">
+          <div className="max-w-3xl">
+            <p className="font-body text-[18px] md:text-[20px] text-white font-bold mb-5">
+              No fine print. No hassles. No questions asked.
+            </p>
+            <p className="font-body text-[18px] md:text-[20px] text-white/90 leading-relaxed mb-8">
+              The only thing you risk losing is weak erections and sexual disappointment.
+            </p>
+            <button className="bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[18px] md:text-[20px] py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto">
+              Claim My Risk-Free HeartAide Now
+            </button>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );
