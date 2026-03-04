@@ -54,10 +54,10 @@ const IngredientsSection = () => {
   const labelPositions = useMemo(() => ingredients.map((_, i) => getLabelPosition(i)), []);
 
   return (
-    <section className="section-padding overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `linear-gradient(to bottom, hsl(var(--background)) 0%, rgba(255,255,255,0.7) 20%, rgba(255,255,255,0.7) 80%, hsl(var(--background)) 100%), url('/images/ingredients-bg.jpg')` }}>
+    <section className="px-5 pt-8 pb-12 md:px-8 md:pt-12 md:pb-20 overflow-hidden bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `linear-gradient(to bottom, hsl(var(--background)) 0%, rgba(255,255,255,0.7) 20%, rgba(255,255,255,0.7) 80%, hsl(var(--background)) 100%), url('/images/ingredients-bg.jpg')` }}>
       <div className="mx-auto w-full max-w-5xl px-5 md:px-8">
         <ScrollReveal animation="fade-down">
-          <h2 className="font-heading text-[36px] md:text-[54px] text-foreground leading-[1.08] text-center mb-6">
+          <h2 className="font-heading text-[36px] md:text-[54px] text-foreground leading-[1.08] text-center mb-4">
             5 Proven Ingredients That <span className="whitespace-nowrap">Restore Sexual Power</span>
           </h2>
           <p className="font-body text-[20px] md:text-[22px] text-foreground text-center max-w-2xl mx-auto mb-12 md:mb-16 leading-relaxed">
