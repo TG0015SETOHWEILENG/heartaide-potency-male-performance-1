@@ -166,7 +166,7 @@ const Index = () => {
                     ))}
                   </div>
                   <p className="font-body text-[16px] md:text-[17px] text-foreground leading-relaxed mb-4 italic">
-                    "{quote}"
+                    "{quote}"<sup>†</sup>
                   </p>
                   <div className="flex items-center gap-3">
                     <img src={avatar} alt={name} className="w-10 h-10 rounded-full object-cover" loading="lazy" />
