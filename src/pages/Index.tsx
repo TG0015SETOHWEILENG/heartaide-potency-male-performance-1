@@ -13,32 +13,32 @@ const Footer = lazy(() => import("@/components/Footer"));
 import { Shield, Zap, Clock, Heart, Leaf, Star, BadgeCheck, Award, MapPin, ShieldCheck } from "lucide-react";
 
 const pricingPlans = [
-  {
-    badge: "Starter",
-    bottleCount: "1",
-    supply: "1 Bottle Supply",
-    tagline: "A 30-Day Test Drive to Sexual Excellence",
-    pricePerBottle: "$59",
-    savings: "$40",
-  },
-  {
-    badge: "Best Value",
-    bottleCount: "6",
-    supply: "6 Bottle Supply",
-    tagline: "Maximize & Sustain Peak Sexual Performance",
-    pricePerBottle: "$33",
-    savings: "$396",
-    isFeatured: true,
-  },
-  {
-    badge: "Most Popular",
-    bottleCount: "3",
-    supply: "3 Bottle Supply",
-    tagline: "Get Consistent Rock-Hard Results Your Wife Will Notice",
-    pricePerBottle: "$49",
-    savings: "$150",
-  },
-];
+{
+  badge: "Starter",
+  bottleCount: "1",
+  supply: "1 Bottle Supply",
+  tagline: "A 30-Day Test Drive to Sexual Excellence",
+  pricePerBottle: "$59",
+  savings: "$40"
+},
+{
+  badge: "Best Value",
+  bottleCount: "6",
+  supply: "6 Bottle Supply",
+  tagline: "Maximize & Sustain Peak Sexual Performance",
+  pricePerBottle: "$33",
+  savings: "$396",
+  isFeatured: true
+},
+{
+  badge: "Most Popular",
+  bottleCount: "3",
+  supply: "3 Bottle Supply",
+  tagline: "Get Consistent Rock-Hard Results Your Wife Will Notice",
+  pricePerBottle: "$49",
+  savings: "$150"
+}];
+
 
 const Index = () => {
   return (
@@ -60,9 +60,9 @@ const Index = () => {
 
         <div className="container-narrow hero-animate hero-animate-delay-1">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 items-start">
-            {pricingPlans.map((plan) => (
-              <PricingCard key={plan.badge} {...plan} />
-            ))}
+            {pricingPlans.map((plan) =>
+            <PricingCard key={plan.badge} {...plan} />
+            )}
           </div>
         </div>
 
@@ -89,26 +89,26 @@ const Index = () => {
                 src="/images/benefits-couple.webp"
                 alt="Happy confident couple embracing in warm morning light"
                 className="w-full rounded-2xl shadow-xl"
-                loading="lazy"
-              />
+                loading="lazy" />
+              
             </ScrollReveal>
             <div className="flex flex-col order-1 md:order-2">
               {[
-                { icon: Zap, title: "Steel-Hard Erections", desc: "Blood flows freely for maximum firmness and confidence" },
-                { icon: Clock, title: "Lasting Stamina", desc: "Performance that goes as long as you want, not just a few minutes" },
-                { icon: Shield, title: "All-Night Recovery", desc: "Ready for round 2, 3, and beyond like you're 25 again" },
-                { icon: Heart, title: "Restored Confidence", desc: "Walk into the bedroom knowing you're the man she married" },
-                { icon: Leaf, title: "Natural Safety", desc: "No dangerous side effects or prescription risks" },
-              ].map(({ icon: Icon, title, desc }, index, arr) => (
-                <ScrollReveal key={title} animation="fade-up" delay={index * 100}>
+              { icon: Zap, title: "Steel-Hard Erections", desc: "Blood flows freely for maximum firmness and confidence" },
+              { icon: Clock, title: "Lasting Stamina", desc: "Performance that goes as long as you want, not just a few minutes" },
+              { icon: Shield, title: "All-Night Recovery", desc: "Ready for round 2, 3, and beyond like you're 25 again" },
+              { icon: Heart, title: "Restored Confidence", desc: "Walk into the bedroom knowing you're the man she married" },
+              { icon: Leaf, title: "Natural Safety", desc: "No dangerous side effects or prescription risks" }].
+              map(({ icon: Icon, title, desc }, index, arr) =>
+              <ScrollReveal key={title} animation="fade-up" delay={index * 100}>
                   <div className="flex items-start gap-4">
                     <div className="flex flex-col items-center flex-shrink-0">
                       <div className="w-12 h-12 rounded-full bg-cta/15 flex items-center justify-center">
                         <Icon className="w-6 h-6 text-cta" strokeWidth={2} />
                       </div>
-                      {index < arr.length - 1 && (
-                        <div className="w-[2px] h-16 bg-cta/30 mt-1" />
-                      )}
+                      {index < arr.length - 1 &&
+                    <div className="w-[2px] h-16 bg-cta/30 mt-1" />
+                    }
                     </div>
                     <div className="pt-1">
                       <h3 className="font-heading text-[20px] md:text-[22px] text-foreground leading-tight mb-1">
@@ -120,7 +120,7 @@ const Index = () => {
                     </div>
                   </div>
                 </ScrollReveal>
-              ))}
+              )}
             </div>
           </div>
         </div>
@@ -132,9 +132,9 @@ const Index = () => {
           <ScrollReveal animation="fade-down">
             <div className="text-center mb-10">
               <div className="flex items-center justify-center gap-1 mb-2">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-7 h-7 text-cta fill-cta" />
-                ))}
+                {[...Array(5)].map((_, i) =>
+                <Star key={i} className="w-7 h-7 text-cta fill-cta" />
+                )}
               </div>
               <h2 className="font-heading text-[28px] md:text-[42px] text-foreground leading-tight mb-2">
                 <span className="md:hidden">Join 47,000+ Men<br />Who've Restored<br />Their Sexual Power</span><span className="hidden md:inline">Join 47,000+ Men Who've<br /> Restored Their Sexual Power</span>
@@ -150,20 +150,20 @@ const Index = () => {
 
           <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
             {[
-              { quote: "My wife actually said 'where did THAT come from?' Best feeling ever.", name: "Mike R.", age: 52, avatar: "/images/avatar-mike.webp" },
-              { quote: "From 2 minutes to 45+ minutes. My confidence is through the roof.", name: "David K.", age: 48, avatar: "/images/avatar-david.webp" },
-              { quote: "Haven't felt this virile since my 20s. My wife is happier than ever.", name: "Robert L.", age: 56, avatar: "/images/avatar-robert.webp" },
-              { quote: "At 59, I thought my best days were behind me. This brought back the passion my wife and I thought was gone forever.", name: "James T.", age: 59, avatar: "/images/avatar-james.webp" },
-              { quote: "The difference is night and day. My stamina returned and my wife can't keep her hands off me.", name: "Carlos M.", age: 44, avatar: "/images/avatar-carlos.webp" },
-              { quote: "I was skeptical but desperate. Now I feel like I'm 25 again. My marriage has never been stronger.", name: "Tony P.", age: 51, avatar: "/images/avatar-tony.webp" },
-              { quote: "My wife said it's like being with a completely different man. I wish I'd found this years ago.", name: "Mark D.", age: 53, avatar: "/images/avatar-mark.webp" },
-            ].map(({ quote, name, age, avatar }, index) => (
-              <ScrollReveal key={name} animation="fade-up" delay={index * 80} className="break-inside-avoid">
+            { quote: "My wife actually said 'where did THAT come from?' Best feeling ever.", name: "Mike R.", age: 52, avatar: "/images/avatar-mike.webp" },
+            { quote: "From 2 minutes to 45+ minutes. My confidence is through the roof.", name: "David K.", age: 48, avatar: "/images/avatar-david.webp" },
+            { quote: "Haven't felt this virile since my 20s. My wife is happier than ever.", name: "Robert L.", age: 56, avatar: "/images/avatar-robert.webp" },
+            { quote: "At 59, I thought my best days were behind me. This brought back the passion my wife and I thought was gone forever.", name: "James T.", age: 59, avatar: "/images/avatar-james.webp" },
+            { quote: "The difference is night and day. My stamina returned and my wife can't keep her hands off me.", name: "Carlos M.", age: 44, avatar: "/images/avatar-carlos.webp" },
+            { quote: "I was skeptical but desperate. Now I feel like I'm 25 again. My marriage has never been stronger.", name: "Tony P.", age: 51, avatar: "/images/avatar-tony.webp" },
+            { quote: "My wife said it's like being with a completely different man. I wish I'd found this years ago.", name: "Mark D.", age: 53, avatar: "/images/avatar-mark.webp" }].
+            map(({ quote, name, age, avatar }, index) =>
+            <ScrollReveal key={name} animation="fade-up" delay={index * 80} className="break-inside-avoid">
                 <div className="bg-card rounded-xl p-5 shadow-md border border-border">
                   <div className="flex items-center gap-1 mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-cta fill-cta" />
-                    ))}
+                    {[...Array(5)].map((_, i) =>
+                  <Star key={i} className="w-4 h-4 text-cta fill-cta" />
+                  )}
                   </div>
                   <p className="font-body text-[16px] md:text-[17px] text-foreground leading-relaxed mb-4 italic">
                     "{quote}"<sup>†</sup>
@@ -182,17 +182,17 @@ const Index = () => {
                   </div>
                 </div>
               </ScrollReveal>
-            ))}
+            )}
           </div>
 
           <ScrollReveal animation="fade-up" delay={200}>
             <div className="mt-12 flex flex-nowrap justify-center items-start gap-4 md:gap-14">
               {[
-                { icon: ShieldCheck, label: "FDA-Registered Facility" },
-                { icon: Award, label: "GMP Certified" },
-                { icon: Star, label: "365-Day Guarantee" },
-              ].map(({ icon: Icon, label }) => (
-                <div key={label} className="flex flex-col items-center gap-2">
+              { icon: ShieldCheck, label: "FDA-Registered Facility" },
+              { icon: Award, label: "GMP Certified" },
+              { icon: Star, label: "365-Day Guarantee" }].
+              map(({ icon: Icon, label }) =>
+              <div key={label} className="flex flex-col items-center gap-2">
                   <div className="w-12 h-12 rounded-xl bg-green-100 flex items-center justify-center">
                     <Icon className="w-6 h-6 text-green-600" strokeWidth={1.5} />
                   </div>
@@ -200,7 +200,7 @@ const Index = () => {
                     {label}
                   </span>
                 </div>
-              ))}
+              )}
             </div>
           </ScrollReveal>
         </div>
@@ -217,16 +217,16 @@ const Index = () => {
         <section id="transformation" className="section-padding bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('/images/transformation-bg.jpg')` }}>
           <div className="container-narrow text-center mb-8 md:mb-10">
             <ScrollReveal animation="fade-down">
-              <h2 className="font-heading text-[28px] md:text-[42px] text-white leading-tight max-w-3xl mx-auto">
-                Choose the "6 Bottles" package below for maximum savings and sexual transformation!
+              <h2 className="font-heading text-[28px] text-white leading-tight max-w-3xl mx-auto md:text-4xl">Choose the "6 Bottles" package below for maximum savings and sexual transformation!
+
               </h2>
             </ScrollReveal>
           </div>
           <div className="container-narrow">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 items-start">
-              {pricingPlans.map((plan) => (
-                <PricingCard key={`transform-${plan.badge}`} {...plan} />
-              ))}
+              {pricingPlans.map((plan) =>
+              <PricingCard key={`transform-${plan.badge}`} {...plan} />
+              )}
             </div>
           </div>
         </section>
@@ -234,14 +234,14 @@ const Index = () => {
         {/* Money-Back Guarantee Ticker */}
         <div className="bg-cta overflow-hidden py-3">
           <div className="flex animate-marquee whitespace-nowrap">
-            {[...Array(20)].map((_, i) => (
-              <span key={i} className="flex items-center gap-3 mx-5">
+            {[...Array(20)].map((_, i) =>
+            <span key={i} className="flex items-center gap-3 mx-5">
                 <img src="/images/guarantee-icon.svg" alt="" className="w-5 h-5" />
                 <span className="font-heading text-[16px] md:text-[18px] text-[#001c38] tracking-wide">
                   Money-Back Guarantee
                 </span>
               </span>
-            ))}
+            )}
           </div>
         </div>
 
@@ -249,8 +249,8 @@ const Index = () => {
         <FAQSection />
         <Footer />
       </Suspense>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
