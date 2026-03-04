@@ -32,44 +32,44 @@ const PricingCard: React.FC<PricingCardProps> = ({
     >
       {/* Badge */}
       <div className="w-full bg-cta py-1.5 md:py-2.5 px-4">
-        <span className="font-body font-extrabold text-[13px] md:text-[18px] uppercase tracking-wider text-cta-foreground">
+        <span className="font-body font-extrabold text-[16px] md:text-[18px] uppercase tracking-wider text-cta-foreground">
           {badge}
         </span>
       </div>
 
-      {/* MOBILE: horizontal compact layout */}
-      <div className="flex md:hidden items-center gap-3 px-3 py-3 w-full">
-        {/* Bottle image with savings bubble */}
-        <div className="relative flex-shrink-0">
+      {/* MOBILE: horizontal compact layout — 3:7 ratio */}
+      <div className="flex md:hidden items-center gap-2 px-2 py-3 w-full">
+        {/* Bottle image — 30% width */}
+        <div className="relative flex-shrink-0 w-[30%] flex items-center justify-center">
           <img
             src={`/images/bottle-${bottleCount}.png`}
             alt={`${bottleCount} bottle${Number(bottleCount) > 1 ? "s" : ""} of HeartAide`}
-            className="w-[80px] h-auto object-contain drop-shadow-xl"
+            className="w-full h-auto object-contain drop-shadow-xl"
             width={308}
             height={308}
             fetchPriority={bottleCount === "1" ? "high" : "auto"}
           />
-          <div className="absolute -right-2 -bottom-1 bg-cta rounded-full w-[44px] h-[44px] flex flex-col items-center justify-center rotate-12 shadow-lg border-2 border-white/20">
-            <span className="font-body font-extrabold text-[8px] text-cta-foreground uppercase leading-none">Save</span>
-            <span className="font-body font-extrabold text-[12px] text-cta-foreground leading-none">{savings}</span>
+          <div className="absolute -right-1 -bottom-1 bg-cta rounded-full w-[40px] h-[40px] flex flex-col items-center justify-center rotate-12 shadow-lg border-2 border-white/20">
+            <span className="font-body font-extrabold text-[7px] text-cta-foreground uppercase leading-none">Save</span>
+            <span className="font-body font-extrabold text-[11px] text-cta-foreground leading-none">{savings}</span>
           </div>
         </div>
 
-        {/* Info */}
-        <div className="flex flex-col items-start text-left flex-1 min-w-0 gap-0.5">
+        {/* Info — 70% width, center aligned */}
+        <div className="flex flex-col items-center text-center flex-1 min-w-0 gap-0.5">
           <p className="font-body font-bold text-[14px] text-primary-foreground uppercase tracking-wide leading-tight">
             {supply}
           </p>
-          <p className="font-body text-[12px] text-primary-foreground/75 leading-snug">
+          <p className="font-body text-[13px] text-primary-foreground/75 leading-snug">
             {tagline}
           </p>
-          <p className="font-body font-extrabold text-[32px] text-primary-foreground leading-none mt-1">
-            {pricePerBottle}<span className="text-[15px] font-bold">/bottle</span>
+          <p className="font-body font-extrabold text-[36px] text-primary-foreground leading-none mt-1">
+            {pricePerBottle}<span className="text-[16px] font-bold">/bottle</span>
           </p>
           <p className="font-body text-[10px] text-primary-foreground/70 leading-tight">
             365-Day Guarantee · FREE Shipping
           </p>
-          <button className="mt-1.5 w-full bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[14px] py-2.5 px-4 rounded-lg transition-all uppercase tracking-wide shadow-lg">
+          <button className="mt-1.5 w-full bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[14px] py-2 px-4 rounded-lg transition-all uppercase tracking-wide shadow-lg">
             Fix My Performance
           </button>
         </div>
