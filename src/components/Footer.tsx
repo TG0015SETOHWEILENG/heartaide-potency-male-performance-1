@@ -83,13 +83,15 @@ const Footer = () => {
               <img src="/images/icon-location.svg" alt="" className="w-4 h-4 mt-0.5 flex-shrink-0" />
               <span>3242 NE 3rd Avenue #1051<br />Camas, WA 98607</span>
             </p>
-            <p className="font-body text-[13px] text-white/60 mb-2 italic">
-              1-800-259-9522
+            <p className="font-body text-[13px] text-white/60 mb-2 italic flex items-center gap-2">
+              <img src="/images/icon-phone.svg" alt="" className="w-4 h-4 flex-shrink-0" />
+              <span>1-800-259-9522</span>
             </p>
-            <p className="font-body text-[13px] text-white/60 italic">
-              Click{" "}
-              <a href="http://help.simplepromise.com/support/tickets/new?" className="text-cta underline hover:brightness-110">here</a>{" "}
-              to submit a ticket
+            <p className="font-body text-[13px] text-white/60 italic flex items-center gap-2">
+              <img src="/images/icon-mail.svg" alt="" className="w-4 h-4 flex-shrink-0" />
+              <span>Click{" "}
+                <a href="http://help.simplepromise.com/support/tickets/new?" className="text-cta underline hover:brightness-110">here</a>{" "}
+                to submit a ticket</span>
             </p>
           </div>
         </div>
