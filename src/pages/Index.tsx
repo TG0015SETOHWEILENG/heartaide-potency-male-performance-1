@@ -137,7 +137,7 @@ const Index = () => {
                 ))}
               </div>
               <h2 className="font-heading text-[28px] md:text-[42px] text-foreground leading-tight mb-2">
-                Join 47,000+ Men Who've Restored Their Sexual Power
+                Join 47,000+ Men Who've<br className="hidden md:block" /> Restored Their Sexual Power
               </h2>
               <p className="font-heading text-[22px] md:text-[28px] text-foreground leading-tight mb-1">
                 4.9 out of 5 Stars
