@@ -30,6 +30,13 @@ const PricingCard: React.FC<PricingCardProps> = ({
         background: `linear-gradient(180deg, hsl(var(--pricing-highlight)) 0%, hsl(var(--pricing-bg)) 40%)`,
       }}
     >
+      {/* FREE SHIPPING ribbon — mobile only */}
+      <div className="md:hidden absolute top-[38px] -left-[30px] z-20 w-[120px] rotate-[-45deg]">
+        <div className="bg-red-600 text-white font-body font-extrabold text-[10px] uppercase tracking-wider text-center py-1 shadow-lg">
+          Free Shipping
+        </div>
+      </div>
+
       {/* Badge */}
       <div className="w-full bg-cta py-1.5 md:py-2.5 px-4">
         <span className="font-body font-extrabold text-[16px] md:text-[18px] uppercase tracking-wider text-cta-foreground">
@@ -66,8 +73,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
           <p className="font-body font-extrabold text-[42px] text-primary-foreground leading-none mt-1">
             {pricePerBottle}<span className="text-[18px] font-bold">/bottle</span>
           </p>
-          <p className="font-body font-medium text-[10px] text-primary-foreground/70 leading-tight">
-            365-Day Guarantee · FREE Shipping
+          <p className="font-body font-medium text-[10px] text-primary-foreground/70 leading-tight whitespace-nowrap">
+            365 Money Back Guarantee
           </p>
         </div>
       </div>
