@@ -3,7 +3,7 @@ import { ShieldCheck, Calendar, HeadphonesIcon, Package, Banknote } from "lucide
 const guaranteeSteps = [
   { icon: ShieldCheck, label: "Order today with confidence" },
   { icon: Calendar, label: "Use for up to 365 days" },
-  { icon: HeadphonesIcon, label: "Not satisfied? Contact us" },
+  { icon: HeadphonesIcon, label: <>Not satisfied?<br />Contact us</> },
   { icon: Package, label: <>Return bottles<br /><span className="text-[13px] md:text-[14px]">(we cover shipping)</span></> },
   { icon: Banknote, label: <>Get every penny back<br /><span className="text-[13px] md:text-[14px]">in 5-7 days</span></> },
 ];
