@@ -1,12 +1,14 @@
+import { lazy, Suspense } from "react";
 import PricingCard from "@/components/PricingCard";
-import WhySection from "@/components/WhySection";
-import FourDropsSection from "@/components/FourDropsSection";
-import IngredientsSection from "@/components/IngredientsSection";
-import ThreeStepsSection from "@/components/ThreeStepsSection";
-import StockUpSection from "@/components/StockUpSection";
-import GuaranteeSection from "@/components/GuaranteeSection";
-import FAQSection from "@/components/FAQSection";
-import Footer from "@/components/Footer";
+
+const WhySection = lazy(() => import("@/components/WhySection"));
+const FourDropsSection = lazy(() => import("@/components/FourDropsSection"));
+const IngredientsSection = lazy(() => import("@/components/IngredientsSection"));
+const ThreeStepsSection = lazy(() => import("@/components/ThreeStepsSection"));
+const StockUpSection = lazy(() => import("@/components/StockUpSection"));
+const GuaranteeSection = lazy(() => import("@/components/GuaranteeSection"));
+const FAQSection = lazy(() => import("@/components/FAQSection"));
+const Footer = lazy(() => import("@/components/Footer"));
 import { Shield, Zap, Clock, Heart, Leaf, Star, BadgeCheck, Award, MapPin, ShieldCheck } from "lucide-react";
 
 const pricingPlans = [
@@ -203,62 +205,64 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why HeartAide Works Better */}
-      <WhySection />
+      <Suspense fallback={null}>
+        {/* Why HeartAide Works Better */}
+        <WhySection />
 
-      {/* Why 4 Drops Work Faster */}
-      <FourDropsSection />
+        {/* Why 4 Drops Work Faster */}
+        <FourDropsSection />
 
-      {/* Ingredients */}
-      <IngredientsSection />
+        {/* Ingredients */}
+        <IngredientsSection />
 
-      {/* 3 Simple Steps */}
-      <ThreeStepsSection />
+        {/* 3 Simple Steps */}
+        <ThreeStepsSection />
 
-      {/* Stock Up & Save */}
-      <StockUpSection />
+        {/* Stock Up & Save */}
+        <StockUpSection />
 
-      {/* Choose Your Transformation — repeated pricing */}
-      <section className="section-padding bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('/images/transformation-bg.jpg')` }}>
-        <div className="container-narrow text-center mb-8 md:mb-10">
-          <p className="font-body text-[18px] md:text-[22px] text-white/90 mb-4 leading-relaxed max-w-3xl mx-auto">
-            Choose the "6 Bottles" package below for maximum savings and sexual transformation!
-          </p>
-          <h2 className="font-heading text-[32px] md:text-[48px] text-white leading-tight">
-            Choose Your Sexual Transformation:
-          </h2>
-        </div>
-        <div className="container-narrow">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
-            {pricingPlans.map((plan) => (
-              <PricingCard key={`transform-${plan.badge}`} {...plan} />
+        {/* Choose Your Transformation — repeated pricing */}
+        <section className="section-padding bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('/images/transformation-bg.jpg')` }}>
+          <div className="container-narrow text-center mb-8 md:mb-10">
+            <p className="font-body text-[18px] md:text-[22px] text-white/90 mb-4 leading-relaxed max-w-3xl mx-auto">
+              Choose the "6 Bottles" package below for maximum savings and sexual transformation!
+            </p>
+            <h2 className="font-heading text-[32px] md:text-[48px] text-white leading-tight">
+              Choose Your Sexual Transformation:
+            </h2>
+          </div>
+          <div className="container-narrow">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
+              {pricingPlans.map((plan) => (
+                <PricingCard key={`transform-${plan.badge}`} {...plan} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Money-Back Guarantee Ticker */}
+        <div className="bg-cta overflow-hidden py-3">
+          <div className="flex animate-marquee whitespace-nowrap">
+            {[...Array(20)].map((_, i) => (
+              <span key={i} className="flex items-center gap-3 mx-5">
+                <img src="/images/guarantee-icon.svg" alt="" className="w-5 h-5" />
+                <span className="font-heading text-[16px] md:text-[18px] text-[#001c38] tracking-wide">
+                  Money-Back Guarantee
+                </span>
+              </span>
             ))}
           </div>
         </div>
-      </section>
 
-      {/* Money-Back Guarantee Ticker */}
-      <div className="bg-cta overflow-hidden py-3">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[...Array(20)].map((_, i) => (
-            <span key={i} className="flex items-center gap-3 mx-5">
-              <img src="/images/guarantee-icon.svg" alt="" className="w-5 h-5" />
-              <span className="font-heading text-[16px] md:text-[18px] text-[#001c38] tracking-wide">
-                Money-Back Guarantee
-              </span>
-            </span>
-          ))}
-        </div>
-      </div>
+        {/* Guarantee Section */}
+        <GuaranteeSection />
 
-      {/* Guarantee Section */}
-      <GuaranteeSection />
+        {/* FAQ */}
+        <FAQSection />
 
-      {/* FAQ */}
-      <FAQSection />
-
-      {/* Footer */}
-      <Footer />
+        {/* Footer */}
+        <Footer />
+      </Suspense>
 
     </div>
   );
