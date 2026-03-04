@@ -52,7 +52,7 @@ const FAQSection = () => {
               <span className="md:hidden">Restore My Erections<br />Order Now</span><span className="hidden md:inline">Restore My Erections - Order Now</span>
             </a>
             <p className="font-body text-[16px] md:text-[18px] text-foreground/70 mt-4 italic">
-              Your wife is counting on you. Don't let her down.
+              Your wife is counting on you.<br className="md:hidden" /> Don't let her down.
             </p>
           </div>
         </ScrollReveal>
