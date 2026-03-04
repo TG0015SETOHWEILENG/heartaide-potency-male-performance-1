@@ -49,7 +49,7 @@ const FAQSection = () => {
         <ScrollReveal animation="fade-up">
           <div className="text-center mt-12 md:mt-16">
             <a href="#transformation" className="inline-block bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[18px] md:text-[20px] py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-auto text-center">
-              <span className="md:hidden">Restore My Erections –<br />Order Now</span><span className="hidden md:inline">Restore My Erections - Order Now</span>
+              <span className="md:hidden"><span className="block whitespace-nowrap">Restore My Erections</span><span className="block whitespace-nowrap">Order Now</span></span><span className="hidden md:inline">Restore My Erections - Order Now</span>
             </a>
             <p className="font-body text-[16px] md:text-[18px] text-foreground/70 mt-4 italic">
               Your wife is counting on you.<br className="md:hidden" /> Don't let her down.
