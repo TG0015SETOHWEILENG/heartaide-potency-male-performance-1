@@ -80,7 +80,7 @@ const Index = () => {
         <div className="container-narrow">
           <ScrollReveal animation="fade-down">
             <h2 className="font-heading text-[28px] md:text-[42px] text-foreground text-center mb-10 leading-tight">
-              What Men Are Reporting <span className="md:whitespace-nowrap">After Just Days on HeartAide:</span>
+              <span className="md:hidden">What Men Are Reporting<br />After Just Days<br />on HeartAide:</span><span className="hidden md:inline">What Men Are Reporting <span className="md:whitespace-nowrap">After Just Days on HeartAide:</span></span>
             </h2>
           </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
