@@ -24,31 +24,65 @@ const PricingCard: React.FC<PricingCardProps> = ({
       href="#"
       onClick={(e) => e.preventDefault()}
       className={`relative rounded-2xl overflow-hidden flex flex-col items-center text-center cursor-pointer hover:scale-[1.02] transition-transform duration-200 ${
-        isFeatured ? "ring-4 ring-cta scale-[1.03] z-10 hover:scale-[1.05]" : ""
+        isFeatured ? "ring-4 ring-cta md:scale-[1.03] z-10 hover:scale-[1.05]" : ""
       }`}
       style={{
         background: `linear-gradient(180deg, hsl(var(--pricing-highlight)) 0%, hsl(var(--pricing-bg)) 40%)`,
       }}
     >
       {/* Badge */}
-      <div className="w-full bg-cta py-2.5 px-4">
-        <span className="font-body font-extrabold text-[16px] md:text-[18px] uppercase tracking-wider text-cta-foreground">
+      <div className="w-full bg-cta py-1.5 md:py-2.5 px-4">
+        <span className="font-body font-extrabold text-[13px] md:text-[18px] uppercase tracking-wider text-cta-foreground">
           {badge}
         </span>
       </div>
 
-      <div className="px-5 py-6 flex flex-col items-center gap-3 flex-1">
-        {/* Supply info */}
-        <p className="font-body font-bold text-[18px] md:text-[20px] text-primary-foreground uppercase tracking-wide">
+      {/* MOBILE: horizontal compact layout */}
+      <div className="flex md:hidden items-center gap-3 px-3 py-3 w-full">
+        {/* Bottle image with savings bubble */}
+        <div className="relative flex-shrink-0">
+          <img
+            src={`/images/bottle-${bottleCount}.png`}
+            alt={`${bottleCount} bottle${Number(bottleCount) > 1 ? "s" : ""} of HeartAide`}
+            className="w-[80px] h-auto object-contain drop-shadow-xl"
+            width={308}
+            height={308}
+            fetchPriority={bottleCount === "1" ? "high" : "auto"}
+          />
+          <div className="absolute -right-2 -bottom-1 bg-cta rounded-full w-[44px] h-[44px] flex flex-col items-center justify-center rotate-12 shadow-lg border-2 border-white/20">
+            <span className="font-body font-extrabold text-[8px] text-cta-foreground uppercase leading-none">Save</span>
+            <span className="font-body font-extrabold text-[12px] text-cta-foreground leading-none">{savings}</span>
+          </div>
+        </div>
+
+        {/* Info */}
+        <div className="flex flex-col items-start text-left flex-1 min-w-0 gap-0.5">
+          <p className="font-body font-bold text-[14px] text-primary-foreground uppercase tracking-wide leading-tight">
+            {supply}
+          </p>
+          <p className="font-body text-[12px] text-primary-foreground/75 leading-snug">
+            {tagline}
+          </p>
+          <p className="font-body font-extrabold text-[32px] text-primary-foreground leading-none mt-1">
+            {pricePerBottle}<span className="text-[15px] font-bold">/bottle</span>
+          </p>
+          <p className="font-body text-[10px] text-primary-foreground/70 leading-tight">
+            365-Day Guarantee · FREE Shipping
+          </p>
+          <button className="mt-1.5 w-full bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[14px] py-2.5 px-4 rounded-lg transition-all uppercase tracking-wide shadow-lg">
+            Fix My Performance
+          </button>
+        </div>
+      </div>
+
+      {/* DESKTOP: original vertical layout */}
+      <div className="hidden md:flex px-5 py-6 flex-col items-center gap-3 flex-1">
+        <p className="font-body font-bold text-[20px] text-primary-foreground uppercase tracking-wide">
           {supply}
         </p>
-
-        {/* Tagline */}
-        <p className="font-body text-[15px] md:text-[16px] text-primary-foreground/80 leading-snug max-w-[220px]">
+        <p className="font-body text-[16px] text-primary-foreground/80 leading-snug max-w-[220px]">
           {tagline}
         </p>
-
-        {/* Bottle image with savings bubble */}
         <div className="relative mb-2">
           <img
             src={`/images/bottle-${bottleCount}.png`}
@@ -56,22 +90,15 @@ const PricingCard: React.FC<PricingCardProps> = ({
             className="w-44 h-auto object-contain drop-shadow-xl"
             width={308}
             height={308}
-            fetchPriority={bottleCount === "1" ? "high" : "auto"}
           />
-          <div
-            className="absolute -right-3 -bottom-2 bg-cta rounded-full w-[72px] h-[72px] flex flex-col items-center justify-center rotate-12 shadow-lg border-[3px] border-white/20"
-          >
+          <div className="absolute -right-3 -bottom-2 bg-cta rounded-full w-[72px] h-[72px] flex flex-col items-center justify-center rotate-12 shadow-lg border-[3px] border-white/20">
             <span className="font-body font-extrabold text-[12px] text-cta-foreground uppercase leading-none">Save</span>
             <span className="font-body font-extrabold text-[18px] text-cta-foreground leading-none">{savings}</span>
           </div>
         </div>
-
-        {/* Price */}
-        <p className="font-body font-extrabold text-[42px] md:text-[50px] text-primary-foreground leading-none">
-          {pricePerBottle}<span className="text-[20px] md:text-[24px] font-bold">/bottle</span>
+        <p className="font-body font-extrabold text-[50px] text-primary-foreground leading-none">
+          {pricePerBottle}<span className="text-[24px] font-bold">/bottle</span>
         </p>
-
-        {/* Shipping & guarantee */}
         <div className="space-y-0.5">
           <p className="font-body font-bold text-[14px] text-primary-foreground/90 uppercase tracking-wide">
             Fast &amp; FREE Shipping
@@ -80,9 +107,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
             365-Day Money-Back Guarantee
           </p>
         </div>
-
-        {/* CTA Button */}
-        <button className="mt-3 w-full bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[18px] md:text-[20px] py-4 px-6 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[56px]">
+        <button className="mt-3 w-full bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[20px] py-4 px-6 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[56px]">
           Fix My Performance
         </button>
       </div>
