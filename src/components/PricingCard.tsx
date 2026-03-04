@@ -66,9 +66,14 @@ const PricingCard: React.FC<PricingCardProps> = ({
           <p className="font-body font-extrabold text-[42px] text-primary-foreground leading-none mt-1">
             {pricePerBottle}<span className="text-[18px] font-bold">/bottle</span>
           </p>
-          <p className="font-body font-medium text-[10px] text-primary-foreground/70 leading-tight">
-            365-Day Guarantee · FREE Shipping
-          </p>
+          <div className="flex flex-col items-center">
+            <p className="font-body font-medium text-[10px] text-primary-foreground/70 leading-tight">
+              365-Day Guarantee
+            </p>
+            <p className="font-body font-medium text-[10px] text-primary-foreground/70 leading-tight">
+              FREE Shipping
+            </p>
+          </div>
         </div>
       </div>
       {/* MOBILE: full-width CTA below the row */}
