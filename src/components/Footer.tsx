@@ -78,7 +78,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="font-body text-[12px] text-white/40 text-center uppercase tracking-wider">
-            Copyright © 2019 – 2026 Simple Promise™. All Rights Reserved.
+            Copyright © 2019 – 2026 Simple Promise™.<br className="md:hidden" /> All Rights Reserved.
           </p>
         </div>
       </div>
