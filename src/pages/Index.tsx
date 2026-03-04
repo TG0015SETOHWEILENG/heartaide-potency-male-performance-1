@@ -64,16 +64,10 @@ const Index = () => {
         </div>
 
         <div className="text-center mt-8 mx-auto px-4" style={{ maxWidth: '1300px' }}>
-          <p className="font-body text-[18px] md:text-body-lg text-white/80 max-w-2xl mx-auto mb-6 leading-relaxed">
+          <p className="font-body text-[18px] md:text-body-lg text-white/80 max-w-2xl mx-auto leading-relaxed">
             Experience the natural breakthrough that's giving men their sexual
             power back. HeartAide works by optimizing blood flow to restore the
             performance you remember from your 20s.
-          </p>
-          <button className="bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-body py-4 px-10 rounded-lg transition-all uppercase tracking-wide shadow-lg min-h-[60px] w-full sm:w-auto">
-            Fix My Bloodflow
-          </button>
-          <p className="font-body text-[16px] text-white/50 mt-3 uppercase tracking-wide">
-            Try Risk-Free
           </p>
         </div>
       </section>
