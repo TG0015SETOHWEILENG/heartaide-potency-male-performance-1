@@ -15,13 +15,13 @@ const StockUpSection = () => {
         </p>
 
         {/* Bottle image + discount callout */}
-        <div className="flex flex-col items-center mb-8">
+        <div className="flex flex-col items-center text-center mb-8">
           <img
             src="/images/bottle-ingredients.png"
             alt="HeartAide bottle with natural ingredients"
             className="h-[280px] md:h-[380px] object-contain mb-6"
           />
-          <p className="font-heading text-[48px] md:text-[72px] text-foreground font-extrabold leading-none mb-2">
+          <p className="font-heading text-[48px] md:text-[72px] text-foreground font-extrabold leading-none mb-2 whitespace-nowrap">
             Up to 79% OFF
           </p>
           <p className="font-heading text-[20px] md:text-[24px] text-foreground font-bold mb-8">
