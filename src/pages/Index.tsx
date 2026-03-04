@@ -58,7 +58,7 @@ const Index = () => {
         </div>
 
         <div className="container-narrow">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-3 md:gap-8 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 items-start">
             {pricingPlans.map((plan) => (
               <PricingCard key={plan.badge} {...plan} />
             ))}
@@ -232,7 +232,7 @@ const Index = () => {
             </h2>
           </div>
           <div className="container-narrow">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-8 items-start">
               {pricingPlans.map((plan) => (
                 <PricingCard key={`transform-${plan.badge}`} {...plan} />
               ))}

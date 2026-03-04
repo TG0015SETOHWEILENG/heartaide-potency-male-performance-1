@@ -24,7 +24,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
       href="#"
       onClick={(e) => e.preventDefault()}
       className={`relative rounded-2xl overflow-hidden flex flex-col items-center text-center cursor-pointer hover:scale-[1.02] transition-transform duration-200 ${
-        isFeatured ? "ring-4 ring-cta md:scale-[1.03] z-10 hover:scale-[1.05]" : ""
+        isFeatured ? "ring-2 ring-cta md:ring-4 md:scale-[1.03] z-10 hover:scale-[1.05]" : ""
       }`}
       style={{
         background: `linear-gradient(180deg, hsl(var(--pricing-highlight)) 0%, hsl(var(--pricing-bg)) 40%)`,
