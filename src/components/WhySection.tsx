@@ -57,7 +57,7 @@ const WhySection = () => {
                 loading="lazy"
               />
               <div>
-                <h3 className="font-heading text-[20px] md:text-[28px] text-white/70 md:text-white drop-shadow-md line-through md:no-underline decoration-red-500 decoration-2">
+                <h3 className="font-heading text-[20px] md:text-[28px] text-white/70 md:text-white drop-shadow-md">
                   The Pill Approach
                 </h3>
                 <p className="font-body text-[14px] text-red-400 uppercase tracking-wide font-semibold">
