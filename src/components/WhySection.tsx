@@ -45,9 +45,8 @@ const WhySection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-5">
           {/* Pills Side — visually "bad" on mobile */}
           <div className="rounded-t-2xl md:rounded-2xl border border-red-500/40 bg-gradient-to-b from-red-950/70 to-black/50 backdrop-blur-md p-6 md:p-8 flex flex-col relative overflow-hidden">
-            {/* Mobile "BAD" badge */}
-            <div className="absolute top-0 left-0 bg-red-600 text-white font-body text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-br-xl md:hidden">
-              ❌ Avoid
+            <div className="absolute top-0 right-0 bg-red-600 text-white font-body text-[11px] font-bold uppercase tracking-wider px-4 py-1 rounded-bl-xl md:hidden">
+              Avoid
             </div>
             <div className="flex items-center gap-4 mb-2 mt-4 md:mt-0">
               <img
@@ -79,19 +78,15 @@ const WhySection = () => {
             </ul>
           </div>
 
-          {/* Mobile VS divider */}
-          <div className="flex items-center justify-center md:hidden -my-4 relative z-10">
-            <div className="w-14 h-14 rounded-full bg-cta text-cta-foreground font-heading text-[18px] font-bold flex items-center justify-center shadow-xl border-4 border-background">
-              VS
-            </div>
-          </div>
+          {/* Spacer between cards on mobile */}
+          <div className="h-3 md:hidden" />
 
           {/* HeartAide Side — visually "good" */}
           <div className="rounded-b-2xl md:rounded-2xl border-2 border-green-400/40 bg-gradient-to-b from-green-950/40 to-black/50 backdrop-blur-md p-6 md:p-8 flex flex-col relative overflow-hidden shadow-[0_0_30px_rgba(74,222,128,0.1)]">
             <div className="absolute top-0 right-0 bg-cta text-cta-foreground font-body text-[12px] font-bold uppercase tracking-wider px-5 py-1.5 rounded-bl-xl">
-              ✅ Better Way
+              Better Way
             </div>
-            <div className="flex items-center gap-4 mb-2">
+            <div className="flex items-center gap-4 mb-2 mt-4 md:mt-0">
               <img
                 src="/images/bottle-1.png"
                 alt="HeartAide dropper bottle"
