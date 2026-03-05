@@ -217,7 +217,7 @@ const Index = () => {
         <section id="transformation" className="section-padding bg-cover bg-center bg-no-repeat relative" style={{ backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('/images/transformation-bg.jpg')` }}>
           <div className="container-narrow text-center mb-8 md:mb-10">
             <ScrollReveal animation="fade-down">
-              <h2 className="font-heading text-[28px] text-white leading-tight max-w-3xl mx-auto md:text-4xl">Choose the "6 Bottles" package below for maximum savings and sexual transformation!
+              <h2 className="font-heading text-[28px] text-white leading-tight max-w-3xl mx-auto md:text-4xl capitalize">Choose the "6 Bottles" Package for Maximum Savings and Sexual Transformation!
 
               </h2>
             </ScrollReveal>
