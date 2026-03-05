@@ -76,7 +76,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
           <p className="font-body font-medium text-[10px] text-primary-foreground/70 leading-tight whitespace-nowrap">
             365 Money Back Guarantee
           </p>
-          <button className="mt-1.5 w-full bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[13px] py-2 px-3 rounded-lg transition-all uppercase tracking-wide shadow-lg">
+          <button className="mt-1.5 w-full bg-cta hover:brightness-110 text-cta-foreground font-body font-extrabold text-[15px] py-2 px-3 rounded-lg transition-all uppercase tracking-wide shadow-lg whitespace-nowrap">
             Fix My Performance
           </button>
         </div>
